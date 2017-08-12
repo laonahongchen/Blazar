@@ -1,0 +1,60 @@
+\contentsline {chapter}{\numberline {1}计算几何}{2}
+\contentsline {section}{\numberline {1.1}凸包}{3}
+\contentsline {section}{\numberline {1.2}三角形的心}{4}
+\contentsline {section}{\numberline {1.3}半平面交}{4}
+\contentsline {section}{\numberline {1.4}圆交面积及重心}{5}
+\contentsline {section}{\numberline {1.5}三维向量绕轴旋转}{5}
+\contentsline {section}{\numberline {1.6}三维凸包}{6}
+\contentsline {chapter}{\numberline {2}数论}{6}
+\contentsline {section}{\numberline {2.1}$O(m^2\qopname \relax o{log}n)$求线性递推数列第n项}{6}
+\contentsline {section}{\numberline {2.2}求逆元}{7}
+\contentsline {section}{\numberline {2.3}中国剩余定理}{7}
+\contentsline {section}{\numberline {2.4}魔法CRT}{7}
+\contentsline {section}{\numberline {2.5}素性测试}{8}
+\contentsline {section}{\numberline {2.6}质因数分解}{8}
+\contentsline {section}{\numberline {2.7}线下整点}{8}
+\contentsline {section}{\numberline {2.8}原根相关}{8}
+\contentsline {chapter}{\numberline {3}代数}{8}
+\contentsline {section}{\numberline {3.1}快速傅里叶变换}{8}
+\contentsline {section}{\numberline {3.2}快速数论变换}{9}
+\contentsline {section}{\numberline {3.3}自适应辛普森积分}{9}
+\contentsline {section}{\numberline {3.4}单纯形}{10}
+\contentsline {chapter}{\numberline {4}字符串}{10}
+\contentsline {section}{\numberline {4.1}后缀数组}{10}
+\contentsline {section}{\numberline {4.2}后缀自动机}{11}
+\contentsline {section}{\numberline {4.3}EX后缀自动机}{11}
+\contentsline {section}{\numberline {4.4}后缀树}{11}
+\contentsline {section}{\numberline {4.5}回文自动机}{12}
+\contentsline {chapter}{\numberline {5}数据结构}{12}
+\contentsline {section}{\numberline {5.1}KD-Tree}{12}
+\contentsline {section}{\numberline {5.2}Treap}{13}
+\contentsline {section}{\numberline {5.3}Link/cut Tree}{14}
+\contentsline {section}{\numberline {5.4}树状数组查询第k小元素}{15}
+\contentsline {chapter}{\numberline {6}图论}{15}
+\contentsline {section}{\numberline {6.1}基础}{15}
+\contentsline {section}{\numberline {6.2}KM}{15}
+\contentsline {section}{\numberline {6.3}点双连通分量}{16}
+\contentsline {section}{\numberline {6.4}边双连通分量}{17}
+\contentsline {section}{\numberline {6.5}最小树形图}{17}
+\contentsline {section}{\numberline {6.6}带花树}{18}
+\contentsline {section}{\numberline {6.7}Dominator Tree}{18}
+\contentsline {section}{\numberline {6.8}无向图最小割}{19}
+\contentsline {section}{\numberline {6.9}重口味费用流}{20}
+\contentsline {section}{\numberline {6.10}2-SAT}{20}
+\contentsline {chapter}{\numberline {7}其他}{21}
+\contentsline {section}{\numberline {7.1}Dancing Links}{21}
+\contentsline {section}{\numberline {7.2}蔡勒公式}{22}
+\contentsline {chapter}{\numberline {8}技巧}{22}
+\contentsline {section}{\numberline {8.1}真正的释放STL容器内存空间}{22}
+\contentsline {section}{\numberline {8.2}无敌的大整数相乘取模}{22}
+\contentsline {section}{\numberline {8.3}无敌的读入优化}{22}
+\contentsline {section}{\numberline {8.4}梅森旋转算法}{22}
+\contentsline {chapter}{\numberline {9}提示}{22}
+\contentsline {section}{\numberline {9.1}控制cout输出实数精度}{22}
+\contentsline {section}{\numberline {9.2}vimrc}{22}
+\contentsline {section}{\numberline {9.3}让make支持c艹11}{22}
+\contentsline {section}{\numberline {9.4}tuple相关}{22}
+\contentsline {section}{\numberline {9.5}线性规划转对偶}{22}
+\contentsline {section}{\numberline {9.6}32-bit/64-bit随机素数}{23}
+\contentsline {section}{\numberline {9.7}NTT 素数及其原根}{23}
+\contentsline {section}{\numberline {9.8}Java Hints}{23}

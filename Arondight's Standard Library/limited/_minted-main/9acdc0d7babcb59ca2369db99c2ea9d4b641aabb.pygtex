@@ -1,0 +1,69 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{java.io.*}\PYG{o}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.*}\PYG{o}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.math.*}\PYG{o}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{Main} \PYG{o}{\PYGZob{}}
+	\PYG{k+kd}{static} \PYG{k+kt}{int} \PYG{n+nf}{get}\PYG{o}{(}\PYG{k+kt}{char} \PYG{n}{c}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+		\PYG{k}{if} \PYG{o}{(}\PYG{n}{c} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}9\PYGZsq{}}\PYG{o}{)}
+			\PYG{k}{return} \PYG{n}{c} \PYG{o}{\PYGZhy{}} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{;}
+		\PYG{k}{else} \PYG{k}{if} \PYG{o}{(}\PYG{n}{c} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}Z\PYGZsq{}}\PYG{o}{)}
+			\PYG{k}{return} \PYG{n}{c} \PYG{o}{\PYGZhy{}} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}} \PYG{o}{+} \PYG{l+m+mi}{10}\PYG{o}{;}
+		\PYG{k}{else}
+			\PYG{k}{return} \PYG{n}{c} \PYG{o}{\PYGZhy{}} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}} \PYG{o}{+} \PYG{l+m+mi}{36}\PYG{o}{;}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{k+kd}{static} \PYG{k+kt}{char} \PYG{n+nf}{get}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{x}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+		\PYG{k}{if} \PYG{o}{(}\PYG{n}{x} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{9}\PYG{o}{)}
+			\PYG{k}{return} \PYG{o}{(}\PYG{k+kt}{char}\PYG{o}{)(}\PYG{n}{x} \PYG{o}{+} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{);}
+		\PYG{k}{else} \PYG{k}{if} \PYG{o}{(}\PYG{n}{x} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{35}\PYG{o}{)}
+			\PYG{k}{return} \PYG{o}{(}\PYG{k+kt}{char}\PYG{o}{)(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{10} \PYG{o}{+} \PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}}\PYG{o}{);}
+		\PYG{k}{else}
+			\PYG{k}{return} \PYG{o}{(}\PYG{k+kt}{char}\PYG{o}{)(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{36} \PYG{o}{+} \PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}}\PYG{o}{);}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{k+kd}{static} \PYG{n}{BigInteger} \PYG{n+nf}{get}\PYG{o}{(}\PYG{n}{String} \PYG{n}{s}\PYG{o}{,} \PYG{n}{BigInteger} \PYG{n}{x}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+		\PYG{n}{BigInteger} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{),} \PYG{n}{now} \PYG{o}{=} \PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{1}\PYG{o}{);}
+		\PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{()} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i}\PYG{o}{\PYGZhy{}\PYGZhy{})} \PYG{o}{\PYGZob{}}
+			\PYG{n}{ans} \PYG{o}{=} \PYG{n}{ans}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{now}\PYG{o}{.}\PYG{n+na}{multiply}\PYG{o}{(}\PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{n}{get}\PYG{o}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n+na}{charAt}\PYG{o}{(}\PYG{n}{i}\PYG{o}{)))));}
+			\PYG{n}{now} \PYG{o}{=} \PYG{n}{now}\PYG{o}{.}\PYG{n+na}{multiply}\PYG{o}{(}\PYG{n}{x}\PYG{o}{);}
+		\PYG{o}{\PYGZcb{}}
+		\PYG{k}{return} \PYG{n}{ans}\PYG{o}{;}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{o}{(}\PYG{n}{String} \PYG{o}{[]} \PYG{n}{args}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+		\PYG{n}{Scanner} \PYG{n}{cin} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Scanner}\PYG{o}{(}\PYG{k}{new} \PYG{n}{BufferedInputStream}\PYG{o}{(}\PYG{n}{System}\PYG{o}{.}\PYG{n+na}{in}\PYG{o}{));}
+		\PYG{k}{for} \PYG{o}{(;} \PYG{o}{;} \PYG{o}{)} \PYG{o}{\PYGZob{}}
+			\PYG{n}{BigInteger} \PYG{n}{x} \PYG{o}{=} \PYG{n}{cin}\PYG{o}{.}\PYG{n+na}{nextBigInteger}\PYG{o}{();}
+			\PYG{k}{if} \PYG{o}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{))} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)}
+				\PYG{k}{break}\PYG{o}{;}
+			\PYG{n}{String} \PYG{n}{s} \PYG{o}{=} \PYG{n}{cin}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{(),} \PYG{n}{t} \PYG{o}{=} \PYG{n}{cin}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{(),} \PYG{n}{r} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{o}{;}
+			\PYG{n}{BigInteger} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{get}\PYG{o}{(}\PYG{n}{s}\PYG{o}{,} \PYG{n}{x}\PYG{o}{).}\PYG{n+na}{mod}\PYG{o}{(}\PYG{n}{get}\PYG{o}{(}\PYG{n}{t}\PYG{o}{,} \PYG{n}{x}\PYG{o}{));}
+			\PYG{k}{if} \PYG{o}{(}\PYG{n}{ans}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{))} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)}
+				\PYG{n}{r} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}0\PYGZdq{}}\PYG{o}{;}
+			\PYG{k}{for} \PYG{o}{(;} \PYG{n}{ans}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{))} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{o}{;)} \PYG{o}{\PYGZob{}}
+				\PYG{n}{r} \PYG{o}{=} \PYG{n}{get}\PYG{o}{(}\PYG{n}{ans}\PYG{o}{.}\PYG{n+na}{mod}\PYG{o}{(}\PYG{n}{x}\PYG{o}{).}\PYG{n+na}{intValue}\PYG{o}{())} \PYG{o}{+} \PYG{n}{r}\PYG{o}{;}
+				\PYG{n}{ans} \PYG{o}{=} \PYG{n}{ans}\PYG{o}{.}\PYG{n+na}{divide}\PYG{o}{(}\PYG{n}{x}\PYG{o}{);}
+			\PYG{o}{\PYGZcb{}}
+			\PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{n}{r}\PYG{o}{);}
+		\PYG{o}{\PYGZcb{}}
+	\PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+c1}{// Arrays}
+\PYG{k+kt}{int} \PYG{n}{a}\PYG{o}{[];}
+\PYG{o}{.}\PYG{n+na}{fill}\PYG{o}{(}\PYG{n}{a}\PYG{o}{[,} \PYG{k+kt}{int} \PYG{n}{fromIndex}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{toIndex}\PYG{o}{],}\PYG{n}{val}\PYG{o}{);} \PYG{o}{|} \PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{a}\PYG{o}{[,} \PYG{k+kt}{int} \PYG{n}{fromIndex}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{toIndex}\PYG{o}{])}
+\PYG{c+c1}{// String}
+\PYG{n}{String} \PYG{n}{s}\PYG{o}{;}
+\PYG{o}{.}\PYG{n+na}{charAt}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{);} \PYG{o}{|} \PYG{n}{compareTo}\PYG{o}{(}\PYG{n}{String}\PYG{o}{)} \PYG{o}{|} \PYG{n}{compareToIgnoreCase} \PYG{o}{()} \PYG{o}{|} \PYG{n}{contains}\PYG{o}{(}\PYG{n}{String}\PYG{o}{)} \PYG{o}{|}
+\PYG{n}{length} \PYG{o}{()} \PYG{o}{|} \PYG{n}{substring}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{len}\PYG{o}{)}
+\PYG{c+c1}{// BigInteger}
+\PYG{o}{.}\PYG{n+na}{abs}\PYG{o}{()} \PYG{o}{|} \PYG{o}{.}\PYG{n+na}{add}\PYG{o}{()} \PYG{o}{|} \PYG{n}{bitLength} \PYG{o}{()} \PYG{o}{|} \PYG{n}{subtract} \PYG{o}{()} \PYG{o}{|} \PYG{n}{divide} \PYG{o}{()} \PYG{o}{|} \PYG{n}{remainder} \PYG{o}{()} \PYG{o}{|} \PYG{n}{divideAndRemainder} \PYG{o}{()} \PYG{o}{|} \PYG{n}{modPow}\PYG{o}{(}\PYG{n}{b}\PYG{o}{,} \PYG{n}{c}\PYG{o}{)} \PYG{o}{|}
+\PYG{n}{pow}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)} \PYG{o}{|} \PYG{n}{multiply} \PYG{o}{()} \PYG{o}{|} \PYG{n}{compareTo} \PYG{o}{()} \PYG{o}{|}
+\PYG{n}{gcd}\PYG{o}{()} \PYG{o}{|} \PYG{n}{intValue} \PYG{o}{()} \PYG{o}{|} \PYG{n}{longValue} \PYG{o}{()} \PYG{o}{|} \PYG{n}{isProbablePrime}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{)} \PYG{o}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{o}{\PYGZca{}}\PYG{n}{c}\PYG{o}{)} \PYG{o}{|}
+\PYG{n}{nextProbablePrime} \PYG{o}{()} \PYG{o}{|} \PYG{n}{shiftLeft}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)} \PYG{o}{|} \PYG{n}{valueOf} \PYG{o}{()}
+\PYG{c+c1}{// BigDecimal}
+\PYG{o}{.}\PYG{n+na}{ROUND\PYGZus{}CEILING} \PYG{o}{|} \PYG{n}{ROUND\PYGZus{}DOWN\PYGZus{}FLOOR} \PYG{o}{|} \PYG{n}{ROUND\PYGZus{}HALF\PYGZus{}DOWN} \PYG{o}{|} \PYG{n}{ROUND\PYGZus{}HALF\PYGZus{}EVEN} \PYG{o}{|} \PYG{n}{ROUND\PYGZus{}HALF\PYGZus{}UP} \PYG{o}{|} \PYG{n}{ROUND\PYGZus{}UP}
+\PYG{o}{.}\PYG{n+na}{divide}\PYG{o}{(}\PYG{n}{BigDecimal} \PYG{n}{b}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{scale} \PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{round\PYGZus{}mode}\PYG{o}{)} \PYG{o}{|} \PYG{n}{doubleValue} \PYG{o}{()} \PYG{o}{|} \PYG{n}{movePointLeft}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)} \PYG{o}{|} \PYG{n}{pow}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)} \PYG{o}{|}
+\PYG{n}{setScale}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{scale} \PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{round\PYGZus{}mode}\PYG{o}{)} \PYG{o}{|} \PYG{n}{stripTrailingZeros} \PYG{o}{()}
+\PYG{c+c1}{// StringBuilder}
+\PYG{n}{StringBuilder} \PYG{n}{sb} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StringBuilder} \PYG{o}{();}
+\PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{n}{elem}\PYG{o}{)} \PYG{o}{|} \PYG{n}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{n}{sb}\PYG{o}{)}
+\end{Verbatim}
