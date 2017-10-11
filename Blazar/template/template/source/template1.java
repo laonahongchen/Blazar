@@ -59,7 +59,6 @@ public class Main{
 			for (int i = 1; i <= n; i ++){
 				k[i]=cin.nextLong();
 				//System.out.println(k[i]);
-				
 			}
 		
 			long Len;
@@ -79,34 +78,14 @@ public class Main{
 				}
 				//System.out.println(Sum);
 			
-			/*
-						Sum = 0;
-			for (int j = 1; j <= n; j++)
-				Sum += (1LL << (j - 1)) * k[j];
-			
-			
-			LL x = Len;
-			
-			
-			if ((2 * Sum) % Len > 0) continue;
-			
-			LL y = (2 * Sum) / Len;
-			*/
 				long x = Len;
-			
-
-				//System.out.println("len="+Len);					
 								
 				if ((Sum.multiply(BigInteger.valueOf(2))) .mod (BigInteger.valueOf(Len)).compareTo(BigInteger.ZERO) > 0) continue;
 			
 				long y = Sum.multiply(BigInteger.valueOf(2)).divide(BigInteger.valueOf(Len)).longValue();
-			
 				if ((y - x + 1) % 2 > 0) continue;
-			
 				A = (y - x + 1) / 2;
-			
 				if ((x + y - 1) % 2 > 0) continue;
-			
 				B = (x + y - 1) / 2;
 			
 				if (A < 1 || A > (long)1e18) continue;
@@ -118,14 +97,9 @@ public class Main{
 				long Cnt_B;
 				long Cnt_A;
 			
-				//printf("%lld %lld\n", A, B);
-			
 				for (int j = 1; j <= n; j++){
-				
 					Cnt_B = Calc(B, j);
 					Cnt_A = Calc(A - 1, j);
-				
-				
 				
 					if (Cnt_B - Cnt_A != k[j]){
 						flag = 0;

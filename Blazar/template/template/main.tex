@@ -60,12 +60,11 @@
 	]{vim}{source/#1}
 }
 
+\begin{document}
+
 \title{代码库}
 \author{Blazar}
 \date{\today}
-
- 
-\begin{document}
 
 \maketitle
 
@@ -81,6 +80,9 @@
 \indent 使用条件：$x \in [0, mod)$并且$x$与$mod$互质
 
 \cppcode{number-theory/inverse.cpp}
+
+\subsection{莫比乌斯反演}
+\cppcode{mobius.cpp}
 
 \subsection{扩展欧几里德算法}
 
@@ -375,6 +377,19 @@
 
 %\subsubsection{弦图的团数}
 
+\subsection{弦图判定}
+\cppcode{Graph-Algorithm/Chord-Graph-Judgement.cpp}
+\subsection{弦图求最大团}
+\cppcode{Graph-Algorithm/Chord-Graph-Group-Counter.cpp}
+\subsection{最大团搜索}
+\cppcode{Graph-Algorithm/Maximum-Clique-Search.cpp}
+\subsection{极大团计数}
+\cppcode{Graph-Algorithm/Maximum-Clique-Count.cpp}
+\subsection{最小树形图}
+\cppcode{Graph-Algorithm/Chu-Liu-Algorithm.cpp}
+\subsection{度限制生成树}
+\cppcode{Graph-Algorithm/Minimum-Spanning-Tree-With-Degree-Limit.cpp}
+
 \subsection{哈密尔顿回路（ORE性质的图）}
 
 ORE性质：$$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \geq n$$
@@ -439,28 +454,58 @@ ORE性质：$$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \
 \cppcode{string-manipulation/minexpress.cpp}
 
 \section{计算几何}
+\subsection{二维几何基础}
+\cppcode{Geometry-Algorithm/Basic2D.cpp}
+\subsection{快速凸包}
+\cppcode{Geometry-Algorithm/Convex-Hull.cpp}
+\subsection{半平面交}
+\cppcode{Geometry-Algorithm/Half-Plane-Intersection.cpp}
+\subsection{三角形的心}
+\cppcode{Geometry-Algorithm/Triangle-Core.cpp}
+\subsection{圆与多边形面积交}
+\cppcode{Geometry-Algorithm/Circle-Polygon-Intersection.cpp}
+\subsection{圆并求面积}
+\noindent \textbf{注意事项：}复杂度$\mathcal{O}(n^2\log n)$
+\cppcode{Geometry-Algorithm/Circle-Union.cpp}
+%\section{最近点对}
+\subsection{最小覆盖圆}
+\cppcode{Geometry-Algorithm/Minimum-Coverage-Circle.cpp}
+\subsection{最小覆盖球}
+\cppcode{Geometry-Algorithm/Minimum-Coverage-Ball.cpp}
+\subsection{三维几何基础}
+\cppcode{Geometry-Algorithm/Basic3D.cpp}
+\subsection{三维凸包}
+\cppcode{Geometry-Algorithm/Convex-Hull-3D.cpp}
+\subsection{三维绕轴旋转}
+\noindent \textbf{注意事项：}逆时针绕轴AB旋转$\theta$角。
+\cppcode{Geometry-Algorithm/Rotate-3D.cpp}
+\subsection{Delaunay三角剖分}
+\cppcode{Geometry-Algorithm/Delaunay-Decomposition.cpp}
+%\section{求四点外接球}
 
-\subsection{二维基础}
+%\section{计算几何}
 
-\subsubsection{点类}
+%\subsection{二维基础}
 
-\cppcode{computational-geometry/point.cpp}
+%\subsubsection{点类}
 
-\subsubsection{凸包}
+%\cppcode{computational-geometry/point.cpp}
 
-\cppcode{computational-geometry/convex-hull.cpp}
+%\subsubsection{凸包}
 
-\subsubsection{半平面交}
-\cppcode{computational-geometry/halfplaneintersection.cpp}
+%\cppcode{computational-geometry/convex-hull.cpp}
 
-\subsubsection{最近点对}
-\cppcode{computational-geometry/closest-pair-of-points.cpp}
+%\subsubsection{半平面交}
+%\cppcode{computational-geometry/halfplaneintersection.cpp}
 
-\subsubsection{最小圆覆盖}
-\cppcode{computational-geometry/mincir.cpp}
+%\subsubsection{最近点对}
+%\cppcode{computational-geometry/closest-pair-of-points.cpp}
 
-\subsubsection{凸包快速询问}
-\cppcode{computational-geometry/PlayWithConvex.cpp}
+%\subsubsection{最小圆覆盖}
+%\cppcode{computational-geometry/mincir.cpp}
+
+%\subsubsection{凸包快速询问}
+%\cppcode{computational-geometry/PlayWithConvex.cpp}
 
 %\subsection{三维基础}
 
@@ -470,11 +515,11 @@ ORE性质：$$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \
 
 %\subsubsection{绕轴旋转}
 
-\subsection{多边形}
+%\subsection{多边形}
 
-\subsubsection{判断点在多边形内部}
+%\subsubsection{判断点在多边形内部}
 
-\cppcode{computational-geometry/point-in-polygon.cpp}
+%\cppcode{computational-geometry/point-in-polygon.cpp}
 
 
 
@@ -658,7 +703,7 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 
 \javacode{template.java}
 
-\subsection{样历代码}
+\subsection{样例代码}
 \javacode{template1.java}
 
 \includepdf[pages={1-6}]{source/biginteger.pdf}
@@ -975,9 +1020,15 @@ z & = & (W - u + v)(u - v + W)
 
 %\subsubsection{梅森数}
 
+\subsection{博弈游戏}
+\input{source/Hint/Game-Theory.tex}
+\subsection{常用数学公式}
+\input{source/Hint/Mathematical-Lemma.tex}
+
 \section{附录}
 \subsection{NTT素数及原根列表}
 \input{source/Appendix/NFT-Primes.tex}
+\subsection{cheat.pdf}
 \includepdf[pages=-]{source/Appendix/cheat.pdf}
 
 \end{document}
