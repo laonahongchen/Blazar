@@ -23,6 +23,7 @@
 \usepackage{fancyhdr}
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
+\usepackage{harpoon}
 %代码高亮
 \geometry{margin=1in}
 \setmonofont{Ubuntu Mono}
@@ -36,14 +37,41 @@
 	linkcolor=black
 }
 
-\newcommand{\cppcode}[1]{
-    \inputminted[mathescape,
-    frame=lines,linenos]{cpp}{source/#1}
-}
+%\newcommand{\cppcode}[1]{
+ %   \inputminted[mathescape,
+  %  frame=lines,linenos]{cpp}{source/#1}
+%}
 
+%\newcommand{\javacode}[1]{
+ %   \inputminted[mathescape,
+  %  frame=lines,linenos]{java}{source/#1}
+%}
+
+\newcommand{\cppcode}[1]{
+	\inputminted[mathescape,
+	tabsize=2,
+	linenos,
+	%frame=single,
+	framesep=2mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{cpp}{source/#1}
+}
 \newcommand{\javacode}[1]{
-    \inputminted[mathescape,
-    frame=lines,linenos]{java}{source/#1}
+	\inputminted[mathescape,
+	tabsize=2,
+	linenos,
+	%frame=single,
+	framesep=2mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{java}{source/#1}
 }
 
 \newcommand{\vimcode}[1]{
@@ -192,6 +220,66 @@
 
 \cppcode{numerical-algorithm/polyroot.cpp}
 
+\section{快速求逆}
+\cppcode{Mathematical-Algorithm/Quick-Reverse.cpp}
+\section{魔幻多项式}
+\subsection*{快速傅里叶变换}
+\noindent \textbf{注意事项：}请实现复数类Complex，并注意快速傅里叶变换精度较差，建议使用快速数论变换。
+\cppcode{Mathematical-Algorithm/Fast-Fourier-Transform.cpp}
+\subsection*{光速数论变换}
+\noindent \textbf{注意事项：}$\mathrm{MOD}$应该为一个特殊的质数$2^n + 1$且$n$应该要足够大，$\mathrm{PRT}$为这个质数的原根。
+\cppcode{Mathematical-Algorithm/Number-Theory-Transform.cpp}
+\subsection*{牛顿迭代法}
+\noindent \textbf{问题描述：}给出多项式$G(x)$，求解多项式$F(x)$满足：
+\[G(F(x)) \equiv 0 \pmod {x^n}\]
+答案只需要精确到$F(x) \bmod {x^n}$即可。\par
+\noindent \textbf{实现原理：}考虑倍增，假设有：
+\[G(F_t(x)) \equiv 0 \pmod{x^t}\]
+对$G(F_{t + 1}(x))$在模$x^{2t}$意义下进行Taylor展开：
+\[G(F_{t + 1}(x)) \equiv G(F_t(x)) + \dfrac{G'(F_t(x))}{1!}(F_{t + 1}(x) - F_t(x)) \pmod{x^{2t}}\]
+那么就有：
+\[F_{t + 1}(x) \equiv F_t(x) - \dfrac{G(F_t(x))}{G'(F_t(x))} \pmod{x^{2t}}\]
+\noindent \textbf{注意事项：}$G(F(x))$的常数项系数必然为0，这个可以作为求解的初始条件；
+\subsection*{多项式求逆}
+\noindent \textbf{原理：}令$G(x) = x * A - 1$（其中$A$是一个多项式系数），根据牛顿迭代法有：
+\begin{displaymath}
+\begin{split}
+F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
+&\equiv 2F_t(x) - F_t(x)^2 * A(x)\pmod{x^{2t}}
+\end{split}
+\end{displaymath}
+\noindent \textbf{注意事项：}
+\begin{enumerate}
+	\item $F(x)$的常数项系数必然不为0，否则没有逆元；
+	\item 复杂度是$O(n \log n)$但是常数比较大（$10^5$大概需要0.3秒左右）；
+	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
+\end{enumerate}
+\cppcode{Mathematical-Algorithm/Polynomial-Inverse.cpp}
+\subsection*{多项式取指数和对数}
+\noindent \textbf{作用：}给出一个多项式$A(x)$，求一个多项式$F(x)$满足$e^A(x) - F(x) \equiv 0 \pmod{x^n}$。\par
+\noindent \textbf{原理：}令$G(x) = \ln x - A$（其中$A$是一个多项式系数），根据牛顿迭代法有：
+\[F_{t + 1}(x) \equiv F_t(x) - F_t(x)(\ln {F_t(x)} - A(x)) \pmod{x^{2t}}\]
+求$\ln {F_t(x)}$可以用先求导再积分的办法，即：
+\[\ln A(x) = \int \dfrac{F'(x)}{F(x)}~\mathrm{d}x\]
+多项式的求导和积分可以在$O(n)$的时间内完成，因此总复杂度为$O(n \log n)$。\par
+\noindent \textbf{应用：}加速多项式快速幂。\par
+\noindent \textbf{注意事项：}
+\begin{enumerate}
+	\item 进行$\log$的多项式必须保证常数项系数为1，否则必须要先求出$\log a[0]$是多少；
+	\item 传入的两个数组必须不同，但传入的次数界没有必要是2的次幂；
+	\item 常数比较大，$10^5$的数据求指数和对数分别需要0.37s和0.85s左右的时间，注意这里{memset}几乎不占用时。
+\end{enumerate}
+\cppcode{Mathematical-Algorithm/Polynomial-ExpAndLn.cpp}
+\subsection*{多项式除法}
+\noindent \textbf{作用：}给出两个多项式$A(x)$和$B(x)$，求两个多项式$D(x)$和$R(x)$满足：
+\[A(x) \equiv D(x)B(x) + R(x) \pmod{x^n}\]
+\noindent \textbf{注意事项：}
+\begin{enumerate}
+	\item 常数比较大概为6倍FFT的时间，即大约$10^5$的数据0.07s左右；
+	\item 传入两个多项式的次数界，没有必要是2的次幂，但是要保证除数多项式不为0。
+\end{enumerate}
+\cppcode{Mathematical-Algorithm/Polynomial-Division.cpp}
+
 %\subsection{牛顿迭代法}
 
 %\subsection{多项式方程求解}
@@ -261,7 +349,7 @@
 \subsection{可持久化Trie}
 \cppcode{data-structure/ChairTrie.cpp}
 
-\subsection{k-d树}
+ \subsection{k-d树}
 \cppcode{data-structure/kd-tree.cpp}
 
 
@@ -699,9 +787,14 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 
 \section{Java}
 
+
+
 \subsection{基础模板}
 
 \javacode{template.java}
+
+\subsection{Java Hints}
+\javacode{Hint/Java-Hints.java}
 
 \subsection{样例代码}
 \javacode{template1.java}

@@ -1,12 +1,3 @@
-autocmd BufNewFile *.cpp exec ":call Setfilehead()"
-func! Setfilehead()
-    call append(0, '// Create: '.strftime("%Y-%m-%d %H:%M:%S"))
-endfunc
-
-colo morning
-set fdm=syntax
-set foldlevel=100
-
 set ruler
 set number
 set smartindent
@@ -19,26 +10,19 @@ set incsearch
 set autoread
 set backspace=2
 set mouse=a
-set autochdir
-set makeprg=g++\ %:r.cpp\ -o\ %:r\ -g\ -std=c++11\ -Wall\ -Wextra\ -Wconversion
 
 syntax on
 
 nmap <C-A> ggVG
 vmap <C-C> "+y
-noremap <C-V> "+P
 
 filetype plugin indent on
 
 autocmd FileType cpp set cindent
-autocmd FileType cpp map <F9> :make<CR>
-autocmd FileType cpp map <C-F9> :!g++ %:r.cpp -o %:r -g -O2 -std=c++11 -Wall -Wextra<CR>
-autocmd FileType cpp map <F8> :!time ./%:r < %:r.in <CR>
-autocmd FileType cpp map <F5> :!time ./%:r <CR>
-autocmd FileType cpp map <F10> :!gdb ./%:r <CR>
+autocmd FileType cpp map <F9> :w <CR> :!g++ % -o %< -g -std=c++11 -Wall -Wextra -Wconversion && size %< <CR>
+autocmd FileType cpp map <C-F9> :!g++ % -o %< -std=c++11 -O2 && size %< <CR>
+autocmd FileType cpp map <F8> :!time ./%< < %<.in <CR>
+autocmd FileType cpp map <F5> :!time ./%< <CR>
 
-autocmd FileType python set smartindent autoindent
-autocmd FileType python map <F5> :!python ./%<CR>
-
-map <F3> :vnew %:r.in <CR>
+map <F3> :vnew %<.in <CR>
 map <F4> :!gedit % <CR>
