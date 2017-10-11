@@ -21,6 +21,8 @@
 \usepackage{fontspec}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
 %代码高亮
 \geometry{margin=1in}
 \setmonofont{Ubuntu Mono}
@@ -28,6 +30,11 @@
 \setmainfont{Ubuntu Mono}
 %\setCJKmonofont{SimSun}
 %\setCJKmainfont[BoldFont={SimSun}]{SimSun}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
 
 \newcommand{\cppcode}[1]{
     \inputminted[mathescape,
@@ -38,8 +45,23 @@
     \inputminted[mathescape,
     frame=lines,linenos]{java}{source/#1}
 }
+
+\newcommand{\vimcode}[1]{
+	\inputminted[mathescape,
+	tabsize=2,
+	linenos,
+	%frame=single,
+	framesep=2mm,
+	breakaftergroup=true,
+	breakautoindent=true,
+	breakbytoken=true,
+	breaklines=true,
+	fontsize=\small
+	]{vim}{source/#1}
+}
+
 \title{代码库}
-\author{Spear of Longinus}
+\author{Blazar}
 \date{\today}
 
  
@@ -309,33 +331,6 @@
 \cppcode{graph-theory/Sap.cpp}
 
 
-\subsection{上下界网络流}
-
-$B(u,v)$表示边$(u,v)$流量的下界，$C(u,v)$表示边$(u,v)$流量的上界，$F(u,v)$表示边$(u,v)$的流量。设$G(u,v) = F(u,v) - B(u,v)$，显然有
-$$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
-
-\subsubsection{无源汇的上下界可行流}
-
-建立超级源点$S^*$和超级汇点$T^*$，对于原图每条边$(u,v)$在新网络中连如下三条边：$S^* \rightarrow v$，容量为$B(u,v)$；$u \rightarrow T^*$，容量为$B(u,v)$；$u \rightarrow v$，容量为$C(u,v) - B(u,v)$。最后求新网络的最大流，判断从超级源点$S^*$出发的边是否都满流即可，边$(u,v)$的最终解中的实际流量为$G(u,v)+B(u,v)$。
-
-\subsubsection{有源汇的上下界可行流}
-
-从汇点$T$到源点$S$连一条上界为$\infty$，下界为$0$的边。按照\textbf{无源汇的上下界可行流}一样做即可，流量即为$T \rightarrow S$边上的流量。
-
-\subsubsection{有源汇的上下界最大流}
-
-\begin{enumerate}
-	\item 在\textbf{有源汇的上下界可行流}中，从汇点$T$到源点$S$的边改为连一条上界为$\infty$，下届为$x$的边。$x$满足二分性质，找到最大的$x$使得新网络存在\textbf{无源汇的上下界可行流}即为原图的最大流。
-	\item 从汇点$T$到源点$S$连一条上界为$\infty$，下界为$0$的边，变成无源汇的网络。按照\textbf{无源汇的上下界可行流}的方法，建立超级源点$S^*$和超级汇点$T^*$，求一遍$S^* \rightarrow T^*$的最大流，再将从汇点$T$到源点$S$的这条边拆掉，求一次$S \rightarrow T$的最大流即可。
-\end{enumerate}
-
-\subsubsection{有源汇的上下界最小流}
-
-\begin{enumerate}
-	\item 在\textbf{有源汇的上下界可行流}中，从汇点$T$到源点$S$的边改为连一条上界为$x$，下界为$0$的边。$x$满足二分性质，找到最小的$x$使得新网络存在\textbf{无源汇的上下界可行流}即为原图的最小流。
-	\item 按照\textbf{无源汇的上下界可行流}的方法，建立超级源点$S^*$与超级汇点$T^*$，求一遍$S^* \rightarrow T^*$的最大流，但是注意这一次不加上汇点$T$到源点$S$的这条边，即不使之改为无源汇的网络去求解。求完后，再加上那条汇点$T$到源点$S$上界$\infty$的边。因为这条边下界为$0$，所以$S^*$，$T^*$无影响，再直接求一次$S^* \rightarrow T^*$的最大流。若超级源点$S^*$出发的边全部满流，则$T \rightarrow S$边上的流量即为原图的最小流，否则无解。
-\end{enumerate}
-
 \subsection{最小费用最大流}
 
 \subsubsection{稀疏图}
@@ -527,6 +522,48 @@ ORE性质：$$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \
 
 \section{其他}
 
+\subsection{斯坦纳树}
+\cppcode{miscellany/Steiner-Tree.cpp}
+
+\subsection{无敌的读入优化}
+\cppcode{miscellany/Reader.cpp}
+
+\subsection{最小树形图}
+\cppcode{miscellany/mintreegraph.cpp}
+
+\subsection{DLX}
+\cppcode{miscellany/DLX.cpp}
+
+\subsection{插头DP}
+\cppcode{miscellany/plugdp.cpp}
+
+
+\subsection{某年某月某日是星期几}
+
+\cppcode{miscellany/what-day-is-today.cpp}
+
+\subsection{枚举大小为$k$的子集}
+
+使用条件：$k > 0$
+
+\cppcode{miscellany/subset-of-size-k.cpp}
+
+\subsection{环状最长公共子串}
+
+\cppcode{miscellany/cyclic-longest-common-string.cpp}
+
+\subsection{LLMOD}
+
+\cppcode{miscellany/LLMOD.cpp}
+
+%\subsection{搜索}
+
+%\subsubsection{Dancing Links X}
+
+\section{vimrc}
+
+\vimcode{Hint/vimrc}
+
 \section{常用结论}
 
 \subsection{上下界网络流}
@@ -564,7 +601,7 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 		\item 从S到y连一条流量为1，费用为z的边，代表这条边至少要被走一次。
 		\item 从x到y连一条流量为MAX，费用为z的边，代表这条边除了至少走的一次之外还可以随便走。
 		\item 从x到T连一条流量为1，费用为0的边。（注意是每一条x->y的边都连，或者你可以记下x的出边数Kx，连一次流量为Kx，费用为0的边）。
-	
+		
 	\end{itemize}
 \end{enumerate}
 建完图后从S到T跑一遍费用流，即可。（当前跑出来的就是满足上下界的最小费用最小流了）
@@ -614,44 +651,6 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 		\item 查清楚厕所方位和打印机方位；
 	\end{enumerate}
 \end{spacing}
-
-\subsection{斯坦纳树}
-\cppcode{miscellany/Steiner-Tree.cpp}
-
-\subsection{无敌的读入优化}
-\cppcode{miscellany/Reader.cpp}
-
-\subsection{最小树形图}
-\cppcode{miscellany/mintreegraph.cpp}
-
-\subsection{DLX}
-\cppcode{miscellany/DLX.cpp}
-
-\subsection{插头DP}
-\cppcode{miscellany/plugdp.cpp}
-
-
-\subsection{某年某月某日是星期几}
-
-\cppcode{miscellany/what-day-is-today.cpp}
-
-\subsection{枚举大小为$k$的子集}
-
-使用条件：$k > 0$
-
-\cppcode{miscellany/subset-of-size-k.cpp}
-
-\subsection{环状最长公共子串}
-
-\cppcode{miscellany/cyclic-longest-common-string.cpp}
-
-\subsection{LLMOD}
-
-\cppcode{miscellany/LLMOD.cpp}
-
-%\subsection{搜索}
-
-%\subsubsection{Dancing Links X}
 
 \section{Java}
 
@@ -942,6 +941,9 @@ $R$为外接圆半径，$r$为内切圆半径
 	$$V=\frac{2}{3}\pi r^2h$$
 \end{enumerate}
 
+\subsection{积分表}
+\input{source/calculustable.tex}
+
 \subsection{立体几何公式}
 
 \subsubsection{球面三角公式}
@@ -972,5 +974,10 @@ z & = & (W - u + v)(u - v + W)
 %\subsection{常用数表}
 
 %\subsubsection{梅森数}
+
+\section{附录}
+\subsection{NTT素数及原根列表}
+\input{source/Appendix/NFT-Primes.tex}
+\includepdf[pages=-]{source/Appendix/cheat.pdf}
 
 \end{document}
