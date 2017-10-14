@@ -424,56 +424,28 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \section{字符串}
 
-\subsection{模式匹配}
-
-\subsubsection{KMP算法}
-
-\cppcode{string-manipulation/KMP.cpp}
-
-\subsubsection{扩展KMP算法}
-
-返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
-
-\cppcode{string-manipulation/ExtKMP.cpp}
-
-\subsubsection{AC自动机}
-
-\cppcode{string-manipulation/ACmachine.cpp}
-
-\subsection{后缀三姐妹}
-
-\subsubsection{后缀数组}
-
-\cppcode{string-manipulation/Sa.cpp}
-
-\subsubsection{后缀数组(dc3)}
-\cppcode{string-manipulation/DC3.cpp}
-
-\subsubsection{后缀自动机-多串LCS}
-\indent 对一个串建后缀自动机，其他串在上面匹配，因为是求所有串的公共子串，所以每个点记录每个串最长匹配长度的最小值，最后找到所有点中最长的一个即可。一个注意事项就是，当走到一个点时，还要更新它的parent树上的祖先的匹配长度,数组开两倍啦啦啦!
-\cppcode{string-manipulation/Sam-LCS.cpp}
-\subsubsection{后缀自动机-各长度字串出现次数最大值}
-\indent 给一个字符串S，令F(x)表示S的所有长度为x的子串中，出现次数的最大值。
-\indent 构建字符串的自动机，对于每个节点，right集合大小就是出现次数，maxs就是它代表的最长长度，那么我们用|right(x)|去更新f[maxs[x]]的值，最后从大到小用f[i]去更新f[i-1]的值即可
-
-\cppcode{string-manipulation/Sam-max.cpp}
-\subsubsection{后缀自动机-两串LCS}
-\cppcode{string-manipulation/Sam-2LCS.cpp}
-
-\subsection{回文三兄弟}
-\subsubsection{马拉车}
-\cppcode{string-manipulation/Manacher.cpp}
-%\subsubsection{回文树(lyx)}
-%\cppcode{string-manipulation/PAMM.cpp}
-\subsubsection{回文自动机(zky)}
-\cppcode{string-manipulation/PAM.cpp}
-
-
-
-
-\subsection{循环串最小表示}
-\cppcode{string-manipulation/minexpress.cpp}
-
+\subsection{广义后缀自动机}
+\noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
+\cppcode{String-Algorithm/Generalized-Suffix-Automaton.cpp}
+\subsection{后缀数组}
+\noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
+\cppcode{String-Algorithm/Suffix-Array.cpp}
+\subsection{回文自动机}
+\noindent \textbf{注意事项：}请注意字符集大小。
+\cppcode{String-Algorithm/Palindromic-Automaton.cpp}
+\subsection{Manacher}
+\noindent \textbf{注意事项：}1-based算法，请注意下表。
+\cppcode{String-Algorithm/Manacher.cpp}
+\subsection{循环串的最小表示}
+\noindent \textbf{注意事项：}0-Based算法，请注意下标。
+\cppcode{String-Algorithm/Minimum-Representation.cpp}
+\subsection{后缀树}
+\noindent \textbf{注意事项：}
+\begin{enumerate}
+	\item \indent 边上的字符区间是左闭右开区间；
+	\item \indent 如果要建立关于多个串的后缀树，请用不同的分隔符，并且对于每个叶子结点，去掉和它父亲的连边上出现的第一个分隔符之后的所有字符；
+\end{enumerate}
+\cppcode{String-Algorithm/Suffix-Tree.cpp}
 \section{计算几何}
 \subsection{二维几何基础}
 \cppcode{Geometry-Algorithm/Basic2D.cpp}
