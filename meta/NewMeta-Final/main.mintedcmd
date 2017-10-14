@@ -1,0 +1,2 @@
+pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P mathescape=True -o "_minted-main/5f934d149202911f71305bf8a2f9f069277e5615.pygtex" "main.pyg" 
+autogobble

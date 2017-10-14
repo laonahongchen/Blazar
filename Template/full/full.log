@@ -1,8 +1,8 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  19 SEP 2017 20:35
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  7 OCT 2017 17:20
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**full.tex
+**full
 (./full.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
@@ -1287,10 +1287,9 @@ Package pdftexcmds Info: \pdfdraftmode not found.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
 )
-runsystem(uname -s > "full.w18")...executed.
 
- (./full.w18)
-runsystem(rm -- "full.w18")...executed.
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
 ) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
@@ -1362,9 +1361,19 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \@float@every@listing=\toks29
 \c@listing=\count179
 )
-runsystem(mkdir -p "_minted-full")...executed.
+runsystem(mkdir -p "_minted-full")...disabled (restricted).
 
 
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage
+               {graphicx, amssymb, amsmath, textcomp, booktabs}
+? 
 (./_minted-full/default.pygstyle)
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -1692,6 +1701,21 @@ Package: yfonts 2003/01/08 v1.3 (WaS)
 * 
 * Redefining CJKfamily `\CJKrmdefault' (FandolSong-Regular(0)).
 *************************************************
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! fontspec error: "font-not-found"
+! 
+! The font "FandolSong-Regular" cannot be found.
+! 
+! See the fontspec documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.22 ...ont={FandolSong-Bold}]{FandolSong-Regular}
+                                                  
+? 
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
@@ -1705,8 +1729,73 @@ Package: yfonts 2003/01/08 v1.3 (WaS)
 .................................................
 . fontspec info: "no-font-shape"
 . 
+. Could not resolve font FandolSong-Regular/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
 . Could not resolve font FandolSong-Regular/I (it probably doesn't exist).
 .................................................
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! fontspec error: "font-not-found"
+! 
+! The font "FandolSong-Regular" cannot be found.
+! 
+! See the fontspec documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.22 ...ont={FandolSong-Bold}]{FandolSong-Regular}
+                                                  
+? 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! fontspec error: "font-not-found"
+! 
+! The font "FandolSong-Regular" cannot be found.
+! 
+! See the fontspec documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.22 ...ont={FandolSong-Bold}]{FandolSong-Regular}
+                                                  
+? 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! fontspec error: "font-not-found"
+! 
+! The font "FandolSong-Bold" cannot be found.
+! 
+! See the fontspec documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.22 ...ont={FandolSong-Bold}]{FandolSong-Regular}
+                                                  
+? 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! fontspec error: "font-not-found"
+! 
+! The font "FandolSong-Bold" cannot be found.
+! 
+! See the fontspec documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.22 ...ont={FandolSong-Bold}]{FandolSong-Regular}
+                                                  
+? 
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1715,11 +1804,9 @@ Package: yfonts 2003/01/08 v1.3 (WaS)
 . 
 . This font family consists of the following NFSS series/shapes:
 . - 'normal' (m/n) with NFSS spec.: <->"FandolSong-Regular/OT:"
-. - 'small caps'  (m/sc) with NFSS spec.: - 'bold' (bx/n) with NFSS spec.:
-. <->"FandolSong-Bold/OT:"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: - 'bold italic' (bx/it) with
-. NFSS spec.: <->"FandolSong-Regular/BI/OT:"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. - 'small caps'  (m/sc) with NFSS spec.: <->"FandolSong-Regular/OT:"- 'bold'
+. (bx/n) with NFSS spec.: <->"FandolSong-Bold/OT:"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"FandolSong-Bold/OT:"
 .................................................
 *************************************************
 * xeCJK warning: "CJKfamily-redef"
@@ -1727,11 +1814,20 @@ Package: yfonts 2003/01/08 v1.3 (WaS)
 * Redefining CJKfamily `\CJKttdefault' (FandolFang-Regular(0)).
 *************************************************
 (./_minted-full/xcode.pygstyle)
-runsystem(which "pygmentize" && touch "full.aex")...executed.
-
-runsystem(rm "full.aex")...executed.
+runsystem(which "pygmentize" && touch "full.aex")...disabled (restricted).
 
 
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \begin{document}
+                     
+? 
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2016/02/10 v3.3.4 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count266
@@ -1878,25 +1974,219 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+! Font EU1/FandolSong-Regular(1)/m/n/12.045=FandolSong-Regular/OT: at 12.045pt 
+not loadable: Metric (TFM) file or installed font not found.
+<to be read again> 
+                   relax 
+l.90 ^^I\maketitle
+                  
+? 
+Missing character: There is no 年 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 月 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 日 in font nullfont!
+[1
 
 
 ] [2
 
-] (./full.toc)
+]
+! Font EU1/FandolSong-Regular(1)/bx/n/26.09749=FandolSong-Bold/OT: at 26.09749p
+t not loadable: Metric (TFM) file or installed font not found.
+<to be read again> 
+                   relax 
+l.91 ^^I\tableofcontents
+                        
+? 
+Missing character: There is no 目 in font nullfont!
+Missing character: There is no 录 in font nullfont!
+(./full.toc
+! Font EU1/FandolSong-Regular(1)/bx/n/10.53937=FandolSong-Bold/OT: at 10.53937p
+t not loadable: Metric (TFM) file or installed font not found.
+<to be read again> 
+                   relax 
+l.1 ...ntsline {chapter}{\numberline {1}代数}{5}
+                                                  
+? 
+Missing character: There is no 代 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+! Font EU1/FandolSong-Regular(1)/m/n/10.53937=FandolSong-Regular/OT: at 10.5393
+7pt not loadable: Metric (TFM) file or installed font not found.
+<to be read again> 
+                   relax 
+l.2 ...x o{log}n)$求线性递推数列第n项}{5}
+                                                  
+? 
+Missing character: There is no 求 in font nullfont!
+Missing character: There is no 线 in font nullfont!
+Missing character: There is no 性 in font nullfont!
+Missing character: There is no 递 in font nullfont!
+Missing character: There is no 推 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 列 in font nullfont!
+Missing character: There is no 第 in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 闪 in font nullfont!
+Missing character: There is no 电 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 变 in font nullfont!
+Missing character: There is no 换 in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no 魔 in font nullfont!
+Missing character: There is no 力 in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 多 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 求 in font nullfont!
+Missing character: There is no 逆 in font nullfont!
+Missing character: There is no 多 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 除 in font nullfont!
+Missing character: There is no 法 in font nullfont!
+Missing character: There is no 多 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no 指 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no 对 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 大 in font nullfont!
+Missing character: There is no 整 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 相 in font nullfont!
+Missing character: There is no 乘 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no 模 in font nullfont!
+Missing character: There is no 线 in font nullfont!
+Missing character: There is no 段 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no 整 in font nullfont!
+Missing character: There is no 点 in font nullfont!
+Missing character: There is no 中 in font nullfont!
+Missing character: There is no 国 in font nullfont!
+Missing character: There is no 剩 in font nullfont!
+Missing character: There is no 余 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 理 in font nullfont!
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 基 in font nullfont!
+Missing character: There is no 础 in font nullfont!
+Missing character: There is no 闪 in font nullfont!
+Missing character: There is no 电 in font nullfont!
+Missing character: There is no 二 in font nullfont!
+Missing character: There is no 分 in font nullfont!
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 匹 in font nullfont!
+Missing character: There is no 配 in font nullfont!
+Missing character: There is no 一 in font nullfont!
+Missing character: There is no 般 in font nullfont!
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 匹 in font nullfont!
+Missing character: There is no 配 in font nullfont!
+Missing character: There is no 一 in font nullfont!
+Missing character: There is no 般 in font nullfont!
+Missing character: There is no 最 in font nullfont!
+Missing character: There is no 大 in font nullfont!
+Missing character: There is no 权 in font nullfont!
+Missing character: There is no 匹 in font nullfont!
+Missing character: There is no 配 in font nullfont!
+Missing character: There is no 无 in font nullfont!
+Missing character: There is no 向 in font nullfont!
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 最 in font nullfont!
+Missing character: There is no 小 in font nullfont!
+Missing character: There is no 割 in font nullfont!
+Missing character: There is no 最 in font nullfont!
+Missing character: There is no 大 in font nullfont!
+Missing character: There is no 带 in font nullfont!
+Missing character: There is no 权 in font nullfont!
+Missing character: There is no 带 in font nullfont!
+Missing character: There is no 花 in font nullfont!
+Missing character: There is no 树 in font nullfont!
+Missing character: There is no 必 in font nullfont!
+Missing character: There is no 经 in font nullfont!
+Missing character: There is no 点 in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 字 in font nullfont!
+Missing character: There is no 符 in font nullfont!
+Missing character: There is no 串 in font nullfont!
+Missing character: There is no 技 in font nullfont!
+Missing character: There is no 巧 in font nullfont!
+Missing character: There is no 无 in font nullfont!
+Missing character: There is no 敌 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 读 in font nullfont!
+Missing character: There is no 入 in font nullfont!
+Missing character: There is no 优 in font nullfont!
+Missing character: There is no 化 in font nullfont!
+Missing character: There is no 真 in font nullfont!
+Missing character: There is no 正 in font nullfont!
+Missing character: There is no 释 in font nullfont!
+Missing character: There is no 放 in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 内 in font nullfont!
+Missing character: There is no 存 in font nullfont!
+)
 \tf@toc=\write6
 \openout6 = `full.toc'.
 
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.91 ^^I\tableofcontents
+                        
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.91 ^^I\tableofcontents
+                        
+? 
 (../source.tex (../source/algebra.tex [3]
 
 LaTeX Font Warning: Font shape `EU1/FandolSong-Regular(1)/m/sl' undefined
 (Font)              using `EU1/FandolSong-Regular(1)/m/n' instead on input line
  1.
 
+Missing character: There is no 目 in font nullfont!
+Missing character: There is no 录 in font nullfont!
 [4
 
 ]
 Chapter 1.
+Missing character: There is no 代 in font nullfont!
+Missing character: There is no 数 in font nullfont!
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
@@ -1922,45 +2212,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/a
 lgebra/linear-recursion.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f =
  open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + 
 hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\
-makeatother\\endinput\n \"); f.close();")...executed.
+makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
-(./full.mintedmd5)
-(./_minted-full/8520780b5af29f20a18bdd1f18530a5b5ad132eb.pygtex
-*************************************************
-* fontspec warning: "script-not-exist-latn"
-* 
-* Font 'STXihei' does not contain script 'CJK'.
-* 'Latin' script used instead.
-*************************************************
-\g__fontspec_family_STXihei_int=\count270
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font STXihei/I (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font STXihei/BI (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font STXihei/I (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'STXihei(0)' created for font 'STXihei' with options
-. [Script={CJK},AutoFakeBold={4}].
-. 
-. This font family consists of the following NFSS series/shapes:
-. - 'normal' (m/n) with NFSS spec.: <->"STXihei/OT:script=latn;language=DFLT;"
-. - 'small caps'  (m/sc) with NFSS spec.: - 'bold' (bx/n) with NFSS spec.:
-. <->"STXihei/OT:script=latn;language=DFLT;embolden=4;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-.................................................
-[5])
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...{cpp}{\source/algebra/linear-recursion.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.7 ...{cpp}{\source/algebra/linear-recursion.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/algebra/linear-recursion.cpp\", \"r\", encoding=\"UTF8\"); t = f.r
+ead(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(tex
+twrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.7 ...{cpp}{\source/algebra/linear-recursion.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...{cpp}{\source/algebra/linear-recursion.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -1968,10 +2265,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/a
 lgebra/NTT+CRT.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"f
 ull.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + hasher.he
 xdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\makeatoth
-er\\endinput\n \"); f.close();")...executed.
+er\\endinput\n \"); f.close();")...disabled (restricted).
 
- (./full.mintedmd5)
-(./_minted-full/5ac7e2d66e64465f1a715af7dc4a0b5ffe64a9ce.pygtex [6])
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \inputminted{cpp}{\source/algebra/NTT+CRT.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.9 \inputminted{cpp}{\source/algebra/NTT+CRT.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/algebra/NTT+CRT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.
+close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.ded
+ent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.9 \inputminted{cpp}{\source/algebra/NTT+CRT.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \inputminted{cpp}{\source/algebra/NTT+CRT.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -1979,11 +2318,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/a
 lgebra/polynomial-inverse.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f
  = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) 
 + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"
-\\makeatother\\endinput\n \"); f.close();")...executed.
+\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/7186e4042c410a238631ffd9c28d3ddb21966cd5.pygtex [7])
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...p}{\source/algebra/polynomial-inverse.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.12 ...p}{\source/algebra/polynomial-inverse.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/algebra/polynomial-inverse.cpp\", \"r\", encoding=\"UTF8\"); t = f
+.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(t
+extwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.12 ...p}{\source/algebra/polynomial-inverse.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...p}{\source/algebra/polynomial-inverse.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -1991,11 +2371,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/a
 lgebra/polynomial-divide.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f 
 = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) +
  hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\
-\makeatother\\endinput\n \"); f.close();")...executed.
+\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/d9763029fafd591661f7009e59a61802de14ece8.pygtex)
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...pp}{\source/algebra/polynomial-divide.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.15 ...pp}{\source/algebra/polynomial-divide.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/algebra/polynomial-divide.cpp\", \"r\", encoding=\"UTF8\"); t = f.
+read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(te
+xtwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.15 ...pp}{\source/algebra/polynomial-divide.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...pp}{\source/algebra/polynomial-divide.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2003,16 +2424,61 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/a
 lgebra/polynomial-expandln.cpp\", \"rb\"); hasher.update(f.read()); f.close(); 
 f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123)
  + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \
-"\\makeatother\\endinput\n \"); f.close();")...executed.
+"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/d3b54e8e6781683ac7dde9b96a1f6eb6996fbaef.pygtex
-Underfull \vbox (badness 4378) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [8]
-[9])) (../source/number-theory.tex [10]
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...}{\source/algebra/polynomial-expandln.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.18 ...}{\source/algebra/polynomial-expandln.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/algebra/polynomial-expandln.cpp\", \"r\", encoding=\"UTF8\"); t = 
+f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(
+textwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.18 ...}{\source/algebra/polynomial-expandln.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...}{\source/algebra/polynomial-expandln.cpp}
+                                                  
+? 
+) (../source/number-theory.tex [5]
+Missing character: There is no 代 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+ [6
+
+]
 Chapter 2.
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 论 in font nullfont!
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2020,10 +2486,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/n
 umber-theory/biginteger-multiply.cpp\", \"rb\"); hasher.update(f.read()); f.clo
 se(); f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + ch
 r(123) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + mac
-ro + \"\\makeatother\\endinput\n \"); f.close();")...executed.
+ro + \"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
-(./full.mintedmd5)
-(./_minted-full/a12550c005953e2f678924c10a00f570b8e6a122.pygtex)
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...urce/number-theory/biginteger-multiply.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.3 ...urce/number-theory/biginteger-multiply.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/number-theory/biginteger-multiply.cpp\", \"r\", encoding=\"UTF8\")
+; t = f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.
+write(textwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.3 ...urce/number-theory/biginteger-multiply.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...urce/number-theory/biginteger-multiply.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2031,11 +2539,53 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/n
 umber-theory/integer-lattice-under-segment.cpp\", \"rb\"); hasher.update(f.read
 ()); f.close(); f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@h
 ash\" + chr(123) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatlett
-er\" + macro + \"\\makeatother\\endinput\n \"); f.close();")...executed.
+er\" + macro + \"\\makeatother\\endinput\n \"); f.close();")...disabled (restri
+cted).
 
 
-(./full.mintedmd5)
-(./_minted-full/c017d1b5d3d0351cfe5c3b90ed49e2b59fa4e5ac.pygtex)
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...r-theory/integer-lattice-under-segment.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.6 ...r-theory/integer-lattice-under-segment.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/number-theory/integer-lattice-under-segment.cpp\", \"r\", encoding
+=\"UTF8\"); t = f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"U
+TF8\"); f.write(textwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.6 ...r-theory/integer-lattice-under-segment.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...r-theory/integer-lattice-under-segment.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2043,15 +2593,61 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/n
 umber-theory/CRT.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\
 "full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + hasher.
 hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\makeato
-ther\\endinput\n \"); f.close();")...executed.
+ther\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/2fae332faa1cad2b291d3ed04a8090479c9457bc.pygtex [11
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
-]))
-(../source/graph-theory.tex [12]
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...tminted{cpp}{\source/number-theory/CRT.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.9 ...tminted{cpp}{\source/number-theory/CRT.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/number-theory/CRT.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); 
+f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.d
+edent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.9 ...tminted{cpp}{\source/number-theory/CRT.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...tminted{cpp}{\source/number-theory/CRT.cpp}
+                                                  
+? 
+) (../source/graph-theory.tex [7]
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+ [8
+
+]
 Chapter 3.
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 论 in font nullfont!
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2059,10 +2655,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/basic.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f = open(
 \"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + hasher
 .hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\makeat
-other\\endinput\n \"); f.close();")...executed.
+other\\endinput\n \"); f.close();")...disabled (restricted).
 
-(./full.mintedmd5)
-(./_minted-full/4a39fa0e3a2183a7c76d70ab149ff4bef5c4b2f2.pygtex)
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...minted{cpp}{\source/graph-theory/basic.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.3 ...minted{cpp}{\source/graph-theory/basic.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/basic.cpp\", \"r\", encoding=\"UTF8\"); t = f.read();
+ f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.
+dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.3 ...minted{cpp}{\source/graph-theory/basic.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...minted{cpp}{\source/graph-theory/basic.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2070,16 +2708,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/Hopcroft-Karp.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f
  = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) 
 + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"
-\\makeatother\\endinput\n \"); f.close();")...executed.
+\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/622c963ebceea9e99e91094d73cbb0f58a18e45f.pygtex [13
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...pp}{\source/graph-theory/Hopcroft-Karp.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.5 ...pp}{\source/graph-theory/Hopcroft-Karp.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/Hopcroft-Karp.cpp\", \"r\", encoding=\"UTF8\"); t = f
+.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(t
+extwrap.dedent(t)); f.close();")...disabled (restricted).
 
- [14])
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.5 ...pp}{\source/graph-theory/Hopcroft-Karp.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...pp}{\source/graph-theory/Hopcroft-Karp.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2087,14 +2761,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/general-matching.cpp\", \"rb\"); hasher.update(f.read()); f.close()
 ; f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(12
 3) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro +
- \"\\makeatother\\endinput\n \"); f.close();")...executed.
+ \"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/c97b724db6bfb1bffb9ebb02b35ff58b0a5c870f.pygtex [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [16])
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...{\source/graph-theory/general-matching.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.7 ...{\source/graph-theory/general-matching.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/general-matching.cpp\", \"r\", encoding=\"UTF8\"); t 
+= f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.writ
+e(textwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.7 ...{\source/graph-theory/general-matching.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...{\source/graph-theory/general-matching.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2102,20 +2814,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/weighted_blossom.cpp\", \"rb\"); hasher.update(f.read()); f.close()
 ; f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(12
 3) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro +
- \"\\makeatother\\endinput\n \"); f.close();")...executed.
+ \"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/40dd504c94ff484b73d33f16b12981a4c713225f.pygtex [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...{\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.9 ...{\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/weighted_blossom.cpp\", \"r\", encoding=\"UTF8\"); t 
+= f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.writ
+e(textwrap.dedent(t)); f.close();")...disabled (restricted).
 
- [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
 
- [20])
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.9 ...{\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...{\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2123,11 +2867,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/StoerWagner_O(V^3).cpp\", \"rb\"); hasher.update(f.read()); f.close
 (); f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(
 123) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro
- + \"\\makeatother\\endinput\n \"); f.close();")...executed.
+ + \"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/5e34b27f34fa8b59676cd87d6f02596433211900.pygtex [21])
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ource/graph-theory/StoerWagner_O(V^3).cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.11 ...ource/graph-theory/StoerWagner_O(V^3).cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/StoerWagner_O(V^3).cpp\", \"r\", encoding=\"UTF8\"); 
+t = f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.wr
+ite(textwrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.11 ...ource/graph-theory/StoerWagner_O(V^3).cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ource/graph-theory/StoerWagner_O(V^3).cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2135,23 +2920,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/weighted_blossom.cpp\", \"rb\"); hasher.update(f.read()); f.close()
 ; f = open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(12
 3) + hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro +
- \"\\makeatother\\endinput\n \"); f.close();")...executed.
+ \"\\makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/40dd504c94ff484b73d33f16b12981a4c713225f.pygtex [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.13 ...\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/weighted_blossom.cpp\", \"r\", encoding=\"UTF8\"); t 
+= f.read(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.writ
+e(textwrap.dedent(t)); f.close();")...disabled (restricted).
 
- [24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
 
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.13 ...\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
 
- [26])
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...\source/graph-theory/weighted_blossom.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2159,18 +2973,62 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/g
 raph-theory/dominator.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f = o
 pen(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + ha
 sher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\ma
-keatother\\endinput\n \"); f.close();")...executed.
+keatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/3525afb4679814898ef0e68297c192c345753c92.pygtex [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [28]))
-(../source/string.tex [29] [30
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...d{cpp}{\source/graph-theory/dominator.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.15 ...d{cpp}{\source/graph-theory/dominator.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/graph-theory/dominator.cpp\", \"r\", encoding=\"UTF8\"); t = f.rea
+d(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(textw
+rap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.15 ...d{cpp}{\source/graph-theory/dominator.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...d{cpp}{\source/graph-theory/dominator.cpp}
+                                                  
+? 
+) (../source/string.tex [9]
+Missing character: There is no 图 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+ [10
 
 ]
 Chapter 4.
+Missing character: There is no 字 in font nullfont!
+Missing character: There is no 符 in font nullfont!
+Missing character: There is no 串 in font nullfont!
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2178,14 +3036,62 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/s
 tring/manacher.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"f
 ull.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + hasher.he
 xdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\makeatoth
-er\\endinput\n \"); f.close();")...executed.
+er\\endinput\n \"); f.close();")...disabled (restricted).
 
-(./full.mintedmd5)
-(./_minted-full/b3469cd083484781ea7a4fb6e26e65a76a67c1ae.pygtex))
-(../source/hints.tex [31] [32
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \inputminted{cpp}{\source/string/manacher.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.3 \inputminted{cpp}{\source/string/manacher.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/string/manacher.cpp\", \"r\", encoding=\"UTF8\"); t = f.read(); f.
+close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(textwrap.ded
+ent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.3 \inputminted{cpp}{\source/string/manacher.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \inputminted{cpp}{\source/string/manacher.cpp}
+                                                  
+? 
+) (../source/hints.tex [11]
+Missing character: There is no 字 in font nullfont!
+Missing character: There is no 符 in font nullfont!
+Missing character: There is no 串 in font nullfont!
+ [12
 
 ]
 Chapter 5.
+Missing character: There is no 技 in font nullfont!
+Missing character: There is no 巧 in font nullfont!
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2193,10 +3099,52 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/h
 ints/input-acceleration.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f =
  open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + 
 hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\
-makeatother\\endinput\n \"); f.close();")...executed.
+makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
-(./full.mintedmd5)
-(./_minted-full/36cf09340272682854c92c91033ec8279886e195.pygtex)
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...{cpp}{\source/hints/input-acceleration.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.3 ...{cpp}{\source/hints/input-acceleration.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/hints/input-acceleration.cpp\", \"r\", encoding=\"UTF8\"); t = f.r
+ead(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(tex
+twrap.dedent(t)); f.close();")...disabled (restricted).
+
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
+
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.3 ...{cpp}{\source/hints/input-acceleration.cpp}
+                                                  
+? 
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...{cpp}{\source/hints/input-acceleration.cpp}
+                                                  
+? 
 \openout5 = `full.mintedcmd'.
 
 runsystem(python -c "import hashlib; hasher = hashlib.sha1(); f = open(\"full.m
@@ -2204,20 +3152,110 @@ intedcmd\", \"rb\"); hasher.update(f.read()); f.close(); f = open(\"../source/h
 ints/STL-memory-release.cpp\", \"rb\"); hasher.update(f.read()); f.close(); f =
  open(\"full.mintedmd5\", \"w\"); macro = \"\\edef\\minted@hash\" + chr(123) + 
 hasher.hexdigest() + chr(125) + \"\"; f.write(\"\\makeatletter\" + macro + \"\\
-makeatother\\endinput\n \"); f.close();")...executed.
+makeatother\\endinput\n \"); f.close();")...disabled (restricted).
 
 
-(./full.mintedmd5)
-(./_minted-full/f0e30ad4a2189489f2bd4b035ff575bf79cfb6c4.pygtex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
 
- [33])))
-runsystem(rm "full.mintedcmd")...executed.
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...{cpp}{\source/hints/STL-memory-release.cpp}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ile {\minted@cachedir /\minted@hash 
+                                                  .pygtex}\IfFileExists {\mi...
+l.5 ...{cpp}{\source/hints/STL-memory-release.cpp}
+                                                  
+? 
+runsystem(python -c "import sys; import textwrap; from io import open; f = open
+(\"../source/hints/STL-memory-release.cpp\", \"r\", encoding=\"UTF8\"); t = f.r
+ead(); f.close(); f = open(\"full.pyg\", \"w\", encoding=\"UTF8\"); f.write(tex
+twrap.dedent(t)); f.close();")...disabled (restricted).
 
-runsystem(rm "full.mintedmd5")...executed.
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
+escape=True -o "_minted-full/.pygtex" "full.pyg" )...disabled (restricted).
 
+! Undefined control sequence.
+<argument> ...achefile \expandafter {\minted@hash 
+                                                  .pygtex}\minted@inputpyg 
+l.5 ...{cpp}{\source/hints/STL-memory-release.cpp}
+                                                  
+? 
 
-[34] (./full.aux)
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...{cpp}{\source/hints/STL-memory-release.cpp}
+                                                  
+? 
+))
+runsystem(rm "_minted-full/8520780b5af29f20a18bdd1f18530a5b5ad132eb.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/5ac7e2d66e64465f1a715af7dc4a0b5ffe64a9ce.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/7186e4042c410a238631ffd9c28d3ddb21966cd5.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/d9763029fafd591661f7009e59a61802de14ece8.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/d3b54e8e6781683ac7dde9b96a1f6eb6996fbaef.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/a12550c005953e2f678924c10a00f570b8e6a122.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/c017d1b5d3d0351cfe5c3b90ed49e2b59fa4e5ac.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/2fae332faa1cad2b291d3ed04a8090479c9457bc.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/4a39fa0e3a2183a7c76d70ab149ff4bef5c4b2f2.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/622c963ebceea9e99e91094d73cbb0f58a18e45f.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/c97b724db6bfb1bffb9ebb02b35ff58b0a5c870f.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/40dd504c94ff484b73d33f16b12981a4c713225f.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/5e34b27f34fa8b59676cd87d6f02596433211900.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/40dd504c94ff484b73d33f16b12981a4c713225f.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/3525afb4679814898ef0e68297c192c345753c92.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/b3469cd083484781ea7a4fb6e26e65a76a67c1ae.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/36cf09340272682854c92c91033ec8279886e195.pygtex")...
+disabled (restricted).
+
+runsystem(rm "_minted-full/f0e30ad4a2189489f2bd4b035ff575bf79cfb6c4.pygtex")...
+disabled (restricted).
+
+runsystem(rm "full.mintedcmd")...disabled (restricted).
+
+ [13] (./full.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.21748pt have occurred.
@@ -2227,12 +3265,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 26891 strings out of 493638
- 526519 string characters out of 6146796
- 574761 words of memory out of 5000000
- 29784 multiletter control sequences out of 15000+600000
- 21144 words of font info for 126 fonts, out of 8000000 for 9000
+ 26723 strings out of 493638
+ 519787 string characters out of 6146796
+ 554407 words of memory out of 5000000
+ 29709 multiletter control sequences out of 15000+600000
+ 19530 words of font info for 110 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,10n,87p,10437b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,7n,87p,10433b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on full.pdf (34 pages).
+Output written on full.pdf (13 pages).

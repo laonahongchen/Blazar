@@ -1,0 +1,2 @@
+pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P mathescape=True -o "full.out.pyg" "full.pyg" 
+autogobble

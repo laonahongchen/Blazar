@@ -205,6 +205,9 @@
 
 \cppcode{numerical-algorithm/fast-fourier-transform.cpp}
 
+\subsection{1e9+7 FFT}
+\cppcode{numerical-algorithm/fft.cpp}
+
 \subsection{单纯形法求解线性规划}
 
 返回结果：$$max\{c_{1 \times m} \cdot x_{m \times 1} \ | \ x_{m \times 1} \geq 0_{m \times 1}, a_{n \times m} \cdot x_{m \times 1} \leq b_{n \times 1}\}$$
@@ -337,10 +340,10 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 %\subsubsection{Link Cut Tree(lyx)}
 %\cppcode{data-structure/Link-cut-tree.cpp}
 
-\subsubsection{AAA Tree}
-\cppcode{data-structure/toptree.cpp}
+%\subsubsection{AAA Tree}
+%\cppcode{data-structure/toptree.cpp}
 
-\subsection{ST}
+\subsection{RMQ}
 \cppcode{data-structure/Rmq.cpp}
 
 \subsection{可持久化线段树}
@@ -375,96 +378,35 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 
 \section{图论}
-
-\subsection{强连通分量}
-
-\cppcode{graph-theory/strongly-connected-components.cpp}
-
-%\subsection{双连通分量}
-
-%\subsubsection{点双连通分量(lyx)}
-%\cppcode{graph-theory/pointtwo.cpp}
-
-%\subsubsection{边双连通分量}
-
+\subsection{点双连通分量}
+\cppcode{Graph-Algorithm/Double-Connected-Component.cpp}
+\subsection{Hungary求最大匹配}
+\cppcode{Graph-Algorithm/Maximum-Matching-Hungary.cpp}
+\subsection{Hopcoft-Karp求最大匹配}
+\cppcode{Graph-Algorithm/Maximum-Matching-Hopcroft-Karp.cpp}
+\subsection{KM带权匹配}
+\noindent \textbf{注意事项：}最小权完美匹配，复杂度为$\mathcal{O}(|V|^3)$。
+\cppcode{Graph-Algorithm/Maximum-Weight-Matching.cpp}
+\subsection{稀疏图最大流}
+\noindent \textbf{注意事项：}适用于比较稀疏的一般图。
+\cppcode{Graph-Algorithm/Maximum-Flow-ISAP.cpp}
+\subsection{稠密图最大流}
+\noindent \textbf{注意事项：}适用于二分图以及一些比较稠密的、增广路径比较短的图。
+\cppcode{Graph-Algorithm/Maximum-Flow-Dinic.cpp}
+\subsection{稀疏图费用流}
+\cppcode{Graph-Algorithm/Minimum-Cost-Maxflow-SPFA.cpp}
+\subsection{稠密图费用流}
+\cppcode{Graph-Algorithm/Minimum-Cost-Maxflow-ZKW.cpp}
 \subsection{2-SAT问题}
-
-\cppcode{graph-theory/two-satisfiability.cpp}
-
-\subsection{二分图最大匹配}
-
-\subsubsection{Hungary算法}
-
-时间复杂度：$\mathcal{O}(V \cdot E)$
-
-\cppcode{graph-theory/Hungarian.cpp}
-
-\subsubsection{Hopcroft Karp算法}
-
-时间复杂度：$\mathcal{O}(\sqrt{V} \cdot E)$
-
-\cppcode{graph-theory/HK.cpp}
-
-\subsection{二分图最大权匹配}
-
-时间复杂度：$\mathcal{O}(V^4)$
-
-\cppcode{graph-theory/maximum-weight-matching.cpp}
-
-\subsection{最大流(dinic)}
-时间复杂度：$\mathcal{O}(V^2 \cdot E)$
-\cppcode{graph-theory/dinic.cpp}
-
-
-\subsection{最大流(sap)}
-时间复杂度：$\mathcal{O}(V^2 \cdot E)$
-\cppcode{graph-theory/Sap.cpp}
-
-
-\subsection{最小费用最大流}
-
-\subsubsection{稀疏图}
-
-时间复杂度：$\mathcal{O}(V \cdot E^2)$
-
-\cppcode{graph-theory/minimum-cost-flow-spfa.cpp}
-
-\subsubsection{稠密图}
-
-使用条件：费用非负\\
-\indent 时间复杂度：$\mathcal{O}(V \cdot E^2)$
-
-\cppcode{graph-theory/minimum-cost-flow-zkw.cpp}
-
-\subsection{一般图最大匹配}
-
-时间复杂度：$\mathcal{O}(V^3)$
-
-\cppcode{graph-theory/maximum-matching-blossom.cpp}
-
-\subsection{无向图全局最小割}
-
-时间复杂度：$\mathcal{O}(V^3)$\\
-\indent 注意事项：处理重边时，应该对边权累加
-
-\cppcode{graph-theory/minimum-cut-stoer-wagner.cpp}
-
-%\subsection{最小树形图}
-
+\cppcode{Graph-Algorithm/Two-Satisfiability.cpp}
 \subsection{有根树的同构}
-
-时间复杂度：$\mathcal{O}(V log V)$
-
-\cppcode{graph-theory/rooted-tree-isomorphism.cpp}
-
-%\subsection{度限制生成树}
-
-%\subsection{弦图相关}
-
-%\subsubsection{弦图的判定}
-
-%\subsubsection{弦图的团数}
-
+\cppcode{Graph-Algorithm/Rooted-Tree-Isomorphism.cpp}
+\subsection{Dominator Tree}
+\cppcode{Graph-Algorithm/Dominator-Tree.cpp}
+\subsection{哈密尔顿回路（ORE 性质的图）}
+\cppcode{Graph-Algorithm/Hamiltonian-Circuit-Ore.cpp}
+\subsection{无向图最小割}
+\cppcode{Graph-Algorithm/Minimum-Cut-Stoer-Wagner.cpp}
 \subsection{弦图判定}
 \cppcode{Graph-Algorithm/Chord-Graph-Judgement.cpp}
 \subsection{弦图求最大团}
@@ -475,19 +417,10 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \cppcode{Graph-Algorithm/Maximum-Clique-Count.cpp}
 \subsection{最小树形图}
 \cppcode{Graph-Algorithm/Chu-Liu-Algorithm.cpp}
+\subsection{带花树}
+\cppcode{Graph-Algorithm/Maximum-Matching-Blossom.cpp}
 \subsection{度限制生成树}
 \cppcode{Graph-Algorithm/Minimum-Spanning-Tree-With-Degree-Limit.cpp}
-
-\subsection{哈密尔顿回路（ORE性质的图）}
-
-ORE性质：$$\forall x,y \in V \wedge (x,y) \notin E \ \ s.t. \ \ deg_x+deg_y \geq n$$
-\indent 返回结果：从顶点$1$出发的一个哈密尔顿回路\\
-\indent 使用条件：$n \geq 3$
-
-\cppcode{graph-theory/hamiltonian-circuit-ore.cpp}
-
-\subsection{必经点树}
-\cppcode{graph-theory/dominator-tree.cpp}
 
 \section{字符串}
 
@@ -767,6 +700,8 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 		\item 函数忘记返回返回值；
 		\item 初始化数组没有初始化完全；
 		\item 对空间限制判断不足导致MLE；
+		\item 对于重边未注意，
+		\item 对于0、1base未弄清楚，用混
 	\end{enumerate}
 \end{spacing}
 
