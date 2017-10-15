@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  15 OCT 2017 08:26
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  15 OCT 2017 20:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1953,12 +1953,12 @@ escape=True -o "main.out.pyg" "source/number-theory/CnmmodP.cpp" )...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/exBSGS.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [9])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/Lucas.cpp" )...executed.
 
 
-(./main.out.pyg [9])
+(./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/BSGS.cpp" )...executed.
 
@@ -1973,44 +1973,44 @@ escape=True -o "main.out.pyg" "source/number-theory/pollard-rho.cpp" )...execut
 ed.
 
  (./main.out.pyg)
+[11]
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/number-theoretic-transform.
 cpp" )...executed.
 
-
-(./main.out.pyg [11])
+ (./main.out.pyg [12])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/primeroot.cpp" )...executed
 .
 
- (./main.out.pyg [12])
+ (./main.out.pyg [13])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/linear-recurrence.cpp" )...
 executed.
 
- (./main.out.pyg [13])
+ (./main.out.pyg [14])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/linear-sieve.cpp" )...execu
 ted.
 
 
-(./main.out.pyg [14])
+(./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/number-theory/lattice-count.cpp" )...exec
 uted.
 
- (./main.out.pyg)
+ (./main.out.pyg [15])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/numerical-algorithm/Gauss.cpp" )...execut
 ed.
 
- (./main.out.pyg [15] [16])
+ (./main.out.pyg [16])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/numerical-algorithm/fast-fourier-transfor
 m.cpp" )...executed.
 
-
-(./main.out.pyg [17])
+ (./main.out.pyg
+[17])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/numerical-algorithm/fft.cpp" )...executed
 .
@@ -2025,13 +2025,13 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/numerical-algorithm/adaptive-simpson.cpp"
  )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/numerical-algorithm/polyroot.cpp" )...exe
 cuted.
 
- (./main.out.pyg [21])
+
+(./main.out.pyg [21] [22])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Quick-Reverse.cpp"
  )...executed.
@@ -2041,29 +2041,29 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Fast-Fourier-Trans
 form.cpp" )...executed.
 
- (./main.out.pyg
-[22])
+ (./main.out.pyg [23])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Number-Theory-Tran
 sform.cpp" )...executed.
 
- (./main.out.pyg [23]) [24]
+
+(./main.out.pyg [24])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Polynomial-Inverse
 .cpp" )...executed.
 
- (./main.out.pyg) [25]
+ (./main.out.pyg [25])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Polynomial-ExpAndL
 n.cpp" )...executed.
 
- (./main.out.pyg [26])
+ (./main.out.pyg [26]) [27]
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Mathematical-Algorithm/Polynomial-Divisio
 n.cpp" )...executed.
 
 
-(./main.out.pyg [27])
+(./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/Treap.cpp" )...executed.
 
@@ -2071,21 +2071,21 @@ escape=True -o "main.out.pyg" "source/data-structure/Treap.cpp" )...executed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/Splay.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [31])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/fhqTreap.cpp" )...executed
 .
 
 
-(./main.out.pyg [31] [32])
+(./main.out.pyg [32])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/crope.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [33])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/rope.cpp" )...executed.
 
- (./main.out.pyg [33] [34] [35])
+ (./main.out.pyg [34] [35] [36])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/lefttree.cpp" )...executed
 .
@@ -2096,50 +2096,50 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/SkewHeap.cpp" )...executed
 .
 
- (./main.out.pyg [36])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/HLD.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [37])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/LCT.cpp" )...executed.
 
  (./main.out.pyg
-[37] [38])
+[38])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/Rmq.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [39])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/ChairTree.cpp" )...execute
 d.
 
- (./main.out.pyg [39] [40])
+ (./main.out.pyg [40])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/ChairTrie.cpp" )...execute
 d.
 
- (./main.out.pyg [41]
-[42])
+ (./main.out.pyg [41] [42])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/kd-tree.cpp" )...executed.
 
- (./main.out.pyg [43] [44] [45])
+
+(./main.out.pyg [43] [44] [45])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/mo-team.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [46])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/mo-teamontree.cpp" )...exe
 cuted.
 
- (./main.out.pyg [46])
+ (./main.out.pyg [47])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/binary-search.cpp" )...exe
 cuted.
 
 
-(./main.out.pyg [47])
+(./main.out.pyg [48])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/fenwicktree.cpp" )...execu
 ted.
@@ -2149,7 +2149,7 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/virtualtree.cpp" )...execu
 ted.
 
- (./main.out.pyg [48])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/pointdivide.cpp" )...execu
 ted.
@@ -2160,82 +2160,82 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/data-structure/yuanfang.cpp" )...executed
 .
 
- (./main.out.pyg [50] [51] [52])
+ (./main.out.pyg [50] [51] [52] [53])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Double-Connected-Componen
 t.cpp" )...executed.
 
- (./main.out.pyg [53] [54])
+ (./main.out.pyg [54] [55])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Matching-Hungary.
 cpp" )...executed.
 
 
-(./main.out.pyg [55])
+(./main.out.pyg [56])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Matching-Hopcroft
 -Karp.cpp" )...executed.
 
- (./main.out.pyg [56])
+ (./main.out.pyg [57])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Weight-Matching.c
 pp" )...executed.
 
- (./main.out.pyg [57])
+ (./main.out.pyg [58])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Flow-ISAP.cpp" ).
 ..executed.
 
 
-(./main.out.pyg [58])
+(./main.out.pyg [59])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Flow-Dinic.cpp" )
 ...executed.
 
- (./main.out.pyg [59])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Minimum-Cost-Maxflow-SPFA
 .cpp" )...executed.
 
- (./main.out.pyg [60])
+ (./main.out.pyg [60] [61])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Minimum-Cost-Maxflow-ZKW.
 cpp" )...executed.
 
 
-(./main.out.pyg [61])
+(./main.out.pyg [62])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Two-Satisfiability.cpp" )
 ...executed.
 
- (./main.out.pyg [62])
+ (./main.out.pyg [63])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Rooted-Tree-Isomorphism.c
 pp" )...executed.
 
- (./main.out.pyg [63])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Dominator-Tree.cpp" )...e
 xecuted.
 
-
-(./main.out.pyg [64] [65])
+ (./main.out.pyg
+[64] [65] [66])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Hamiltonian-Circuit-Ore.c
 pp" )...executed.
 
- (./main.out.pyg [66] [67])
+ (./main.out.pyg [67] [68])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Minimum-Cut-Stoer-Wagner.
 cpp" )...executed.
 
- (./main.out.pyg [68])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Chord-Graph-Judgement.cpp
 " )...executed.
 
-
-(./main.out.pyg [69] [70])
+ (./main.out.pyg
+[69] [70])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Chord-Graph-Group-Counter
 .cpp" )...executed.
@@ -2250,88 +2250,87 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Clique-Count.cpp"
  )...executed.
 
-
-(./main.out.pyg [73])
+ (./main.out.pyg [73])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Chu-Liu-Algorithm.cpp" ).
 ..executed.
 
- (./main.out.pyg [74])
+
+(./main.out.pyg [74] [75])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Maximum-Matching-Blossom.
 cpp" )...executed.
 
- (./main.out.pyg [75] [76])
+ (./main.out.pyg [76] [77])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Graph-Algorithm/Minimum-Spanning-Tree-Wit
 h-Degree-Limit.cpp" )...executed.
 
-
-(./main.out.pyg [77] [78])
+ (./main.out.pyg [78]
+[79])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/string-manipulation/KMP.cpp" )...executed
 .
 
- (./main.out.pyg [79])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/string-manipulation/ExtKMP.cpp" )...execu
 ted.
 
- (./main.out.pyg)
+ (./main.out.pyg [80])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/string-manipulation/ACmachine.cpp" )...ex
 ecuted.
 
-
-(./main.out.pyg [80])
+ (./main.out.pyg [81])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Generalized-Suffix-Autom
 aton.cpp" )...executed.
 
- (./main.out.pyg [81])
+
+(./main.out.pyg [82])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Suffix-Array.cpp" )...ex
 ecuted.
 
- (./main.out.pyg [82])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Palindromic-Automaton.cp
 p" )...executed.
 
-
-(./main.out.pyg [83])
+ (./main.out.pyg [83])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Manacher.cpp" )...execut
 ed.
 
- (./main.out.pyg)
+ (./main.out.pyg
+[84])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Minimum-Representation.c
 pp" )...executed.
 
- (./main.out.pyg [84])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/String-Algorithm/Suffix-Tree.cpp" )...exe
 cuted.
 
- (./main.out.pyg
-[85])
+ (./main.out.pyg [85] [86])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Basic2D.cpp" )...execu
 ted.
 
- (./main.out.pyg [86] [87] [88] [89])
+ (./main.out.pyg [87] [88]
+[89])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Convex-Hull.cpp" )...e
 xecuted.
 
- (./main.out.pyg)
+ (./main.out.pyg [90])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Half-Plane-Intersectio
 n.cpp" )...executed.
 
- (./main.out.pyg
-[90] [91])
+ (./main.out.pyg [91])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Triangle-Core.cpp" )..
 .executed.
@@ -2341,23 +2340,24 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Circle-Polygon-Interse
 ction.cpp" )...executed.
 
- (./main.out.pyg [92])
+
+(./main.out.pyg [92] [93])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Circle-Union.cpp" )...
 executed.
 
- (./main.out.pyg [93] [94])
+ (./main.out.pyg [94] [95])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Minimum-Coverage-Circl
 e.cpp" )...executed.
 
-
-(./main.out.pyg [95])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Minimum-Coverage-Ball.
 cpp" )...executed.
 
- (./main.out.pyg [96] [97] [98])
+
+(./main.out.pyg [96] [97] [98])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Basic3D.cpp" )...execu
 ted.
@@ -2367,8 +2367,8 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Convex-Hull-3D.cpp" ).
 ..executed.
 
-
-(./main.out.pyg [100] [101] [102])
+ (./main.out.pyg [100]
+[101] [102])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Rotate-3D.cpp" )...exe
 cuted.
@@ -2378,37 +2378,36 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry-Algorithm/Delaunay-Decomposition
 .cpp" )...executed.
 
- (./main.out.pyg
-[104] [105])
+ (./main.out.pyg [104] [105])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/Steiner-Tree.cpp" )...executed
 .
 
- (./main.out.pyg [106])
+
+(./main.out.pyg [106])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/Reader.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [107])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/mintreegraph.cpp" )...executed
 .
 
- (./main.out.pyg [107])
+ (./main.out.pyg [108])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/DLX.cpp" )...executed.
 
 
-(./main.out.pyg [108] [109])
+(./main.out.pyg [109] [110])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/plugdp.cpp" )...executed.
 
- (./main.out.pyg [110] [111])
+ (./main.out.pyg [111] [112])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/what-day-is-today.cpp" )...exe
 cuted.
 
- (./main.out.pyg
-[112])
+ (./main.out.pyg)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 596.
@@ -2421,20 +2420,21 @@ runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/subset-of-size-k.cpp" )...exec
 uted.
 
-(./main.out.pyg)
+(./main.out.pyg [113])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/cyclic-longest-common-string.c
 pp" )...executed.
 
- (./main.out.pyg [113])
+ (./main.out.pyg [114])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/miscellany/LLMOD.cpp" )...executed.
 
- (./main.out.pyg [114])
+ (./main.out.pyg)
 runsystem(pygmentize -l vim -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Hint/vimrc" )...executed.
 
- (./main.out.pyg) [115] [116] (./source/Hint/Bernoulli-Number.tex) [117]
+ (./main.out.pyg
+[115]) [116] (./source/Hint/Bernoulli-Number.tex [117])
 runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P mat
 hescape=True -o "main.out.pyg" "source/template.java" )...executed.
 
@@ -2443,11 +2443,11 @@ hescape=True -o "main.out.pyg" "source/template.java" )...executed.
 runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P mat
 hescape=True -o "main.out.pyg" "source/Hint/Java-Hints.java" )...executed.
 
- (./main.out.pyg [119])
+ (./main.out.pyg [119] [120])
 runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P mat
 hescape=True -o "main.out.pyg" "source/template1.java" )...executed.
 
- (./main.out.pyg [120] [121] [122])
+ (./main.out.pyg [121] [122])
 File: source/biginteger.pdf Graphic file (type QTm)
 
 <use  "source/biginteger.pdf" >
@@ -2842,6 +2842,6 @@ Here is how much of TeX's memory you used:
  33915 multiletter control sequences out of 15000+600000
  24857 words of font info for 135 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,18n,77p,10427b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,18n,77p,10427b,732s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (163 pages).
