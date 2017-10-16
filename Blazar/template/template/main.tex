@@ -426,13 +426,14 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \subsection{KMP算法}
 
-\cppcode{string-manipulation/KMP.cpp}
+\cppcode{temp_ypm/KMP-poj3461.cpp}
 
 \subsection{扩展KMP算法}
 
-返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
+%返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
 
-\cppcode{string-manipulation/ExtKMP.cpp}
+%\cppcode{string-manipulation/ExtKMP.cpp}
+\cppcode{temp_ypm/exKMP-hdu2594.cpp}
 
 \subsection{AC自动机}
 
@@ -454,12 +455,15 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
 %\cppcode{String-Algorithm/Suffix-Array.cpp}
 \cppcode{temp_ypm/SA.cpp};
+\noindent \textbf{注意：}$\mathcal{O}(n)$线性构造，常数大
+\cppcode{temp_ypm/dc3-uoj34.cpp}
+
 \subsection{回文自动机}
 \noindent \textbf{注意事项：}请注意字符集大小。
 \cppcode{String-Algorithm/Palindromic-Automaton.cpp}
 \subsection{Manacher}
 \noindent \textbf{注意事项：}1-based算法，请注意下表。
-\cppcode{String-Algorithm/Manacher.cpp}
+\cppcode{temp_ypm/manacher-poj3974.cpp}
 \subsection{循环串的最小表示}
 \noindent \textbf{注意事项：}0-Based算法，请注意下标。
 %\cppcode{String-Algorithm/Minimum-Representation.cpp}
