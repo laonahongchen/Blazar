@@ -373,8 +373,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{点分治(zky)}
 \cppcode{data-structure/pointdivide.cpp}
 
-\subsection{元芳树}
-\cppcode{data-structure/yuanfang.cpp}
+%\subsection{元芳树}
+%\cppcode{data-structure/yuanfang.cpp}
 
 
 \section{图论}
@@ -436,13 +436,24 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \subsection{AC自动机}
 
-\cppcode{string-manipulation/ACmachine.cpp}
-\subsection{广义后缀自动机}
+%\cppcode{string-manipulation/ACmachine.cpp}
+\cppcode{temp_ypm/acauto.cpp}
+\subsection{后缀自动机}
+
+\subsubsection{广义后缀自动机(多串)}
 \noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
 \cppcode{String-Algorithm/Generalized-Suffix-Automaton.cpp}
+
+\subsubsection{sam-ypm}
+\subsubsection*{sam-nsubstr}
+\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
+\subsubsection*{sam-lcs}
+\cppcode{temp_ypm/SAM-LCS2.cpp}
+
 \subsection{后缀数组}
 \noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
-\cppcode{String-Algorithm/Suffix-Array.cpp}
+%\cppcode{String-Algorithm/Suffix-Array.cpp}
+\cppcode{temp_ypm/SA.cpp};
 \subsection{回文自动机}
 \noindent \textbf{注意事项：}请注意字符集大小。
 \cppcode{String-Algorithm/Palindromic-Automaton.cpp}
@@ -451,7 +462,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \cppcode{String-Algorithm/Manacher.cpp}
 \subsection{循环串的最小表示}
 \noindent \textbf{注意事项：}0-Based算法，请注意下标。
-\cppcode{String-Algorithm/Minimum-Representation.cpp}
+%\cppcode{String-Algorithm/Minimum-Representation.cpp}
+\cppcode{temp_ypm/minimumpresentation.cpp}
 \subsection{后缀树}
 \noindent \textbf{注意事项：}
 \begin{enumerate}
