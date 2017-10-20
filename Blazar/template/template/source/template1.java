@@ -2,6 +2,20 @@ import java.io.*;
 import java.math.*;
 import java.util.*;
 
+public static class edge implements Comparable<edge>{
+	public int u,v,w;
+	public int compareTo(edge e){
+		return w-e.w;
+	}
+}
+public static class cmp implements Comparator<edge>{
+	public int compare(edge a,edge b){
+		if(a.w<b.w)return 1;
+		if(a.w>b.w)return -1;
+		return 0;
+	}
+}
+
 public class Main{
 	public static long max(long a,long b){
 		if(a>b)return a;
