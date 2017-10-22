@@ -24,6 +24,7 @@ void doubling(int *a,int n,int m){
 	}
 }
 void calcHeight(int *a, int n){
+	a[n] = -1;
 	for(int i=0;i<n;++i) rk[sa[i]]=i;
 	int cur=0; for(int i=0;i<n;++i)
 	if(rk[i]){
