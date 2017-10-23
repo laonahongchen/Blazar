@@ -1,11 +1,5 @@
 #include<bits/stdc++.h>
 #define next NEXT
-using namespace std;
-const int N = 101010;
-
-
-char s1[N], s2[N];
-int next[N], extend[N];
 
 //next[i]表示s和其后缀s[i, n]的lcp的长度
 void getnext(char s[], int n, int next[])
@@ -47,24 +41,5 @@ void getextend(char s1[], char s2[], int extend[])
 			extend[i] = j;
 			pos = i;
 		}
-	}
-}
-
-int main()
-{
-	while(scanf("%s%s", s1 + 1, s2 + 1) == 2)
-	{
-		getextend(s2, s1, extend);
-		int m = strlen(s2 + 1);
-		bool flag = 0;
-		for(int i = 1; i <= m; i++)
-			if(extend[i] == m - i + 1)
-			{
-				flag = 1;
-				printf("%s %d\n", s2 + i, m - i + 1);
-				break;			
-			}
-		if(!flag)
-			puts("0");
 	}
 }

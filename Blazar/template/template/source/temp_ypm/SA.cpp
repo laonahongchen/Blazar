@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
 #define ws wws
-using namespace std;
 const int MAXN = 201010;
 int wa[MAXN], wb[MAXN], wv[MAXN], ws[MAXN];
 int sa[MAXN], rk[MAXN], height[MAXN];
@@ -32,7 +30,7 @@ void SA(char *r, int *sa, int n, int m)
 		x[sa[1]] = p = 1;
 		for(int i = 2; i <= n; i++)
 			x[sa[i]] = cmp(y, sa[i - 1], sa[i], j) ? p : ++p;
-	} 
+	}
 }
 
 void getheight(char *r, int *sa, int *rk, int *h, int n)
@@ -47,18 +45,4 @@ void getheight(char *r, int *sa, int *rk, int *h, int n)
 		h[rk[i]] = p;
 	}	
 }
-
-int main(){
-	scanf("%s", s + 1);
-	int n = strlen(s + 1);
-	SA(s, sa, n, 255);
-	for(int i = 1; i <= n; i++)
-		printf("%d ", sa[i]);
-	puts("");
-	getheight(s, sa, rk, height, n);
-	for(int i = 2; i <= n; i++)
-		printf("%d ", height[i]);
-	puts("");
-}
-
 

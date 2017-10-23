@@ -1,45 +1,43 @@
-#include <cstdio>
-#include <queue>
-#include <cstring>
-using namespace std;
-typedef long long LL;
-typedef long double DD;
-const int inf = 1e9;
-const int mo= 1e9+7;
+const int C = 26;
+const int L = 1e5 + 5;
 const int N = 5e5+10;
-int n, cnt, fail[N], son[N][26], num[N];
-char s[N << 1];
-bool f[N];
+int n, root, cnt, fail[N], son[N][26], num[N];
+char s[L];
 
-inline void clear(int i){
-	memset(son[i], 0, sizeof(son[i]));
-	fail[i] = num[i] = 0;
-	f[i] = 0;
+inline int newNode()
+{
+	cnt++;
+	memset(son[cnt], 0, sizeof(son[cnt]));
+	fail[cnt] = num[cnt] = 0;
+	return cnt;
 }
 
-void insert(char *s, int n){
+void insert(char *s)
+{
+	int n = strlen(s + 1);
 	int now = 1;
-	for(int i = 1; i <= n; i++){
+	for(int i = 1; i <= n; i++)
+	{
 		int c = s[i] - 'a';
-		if(!son[now][c]){
-			cnt++;
-			clear(cnt);
-			son[now][c] = cnt;
-		}
+		if(!son[now][c])
+			son[now][c] = newNode();
 		now = son[now][c];
 	}
 	num[now]++;
 }
 
-queue<int> Q;
-void ACmatch(){//建立fail指针
-	fail[1] = 0;
-	Q.push(1);
-	while(!Q.empty()){
+
+void getfail(){
+	static queue<int> Q;
+	fail[root] = 0;
+	Q.push(root);
+	while(!Q.empty())
+	{
 		int now = Q.front();
 		Q.pop();
-		for(int i = 0; i < 26; i++)
-			if(son[now][i]){
+		for(int i = 0; i < C; i++)
+			if(son[now][i])
+			{
 				Q.push(son[now][i]);
 				int p = fail[now];
 				while(!son[p][i])
@@ -50,39 +48,19 @@ void ACmatch(){//建立fail指针
 				son[now][i] = son[fail[now]][i];
 	}
 }
-	
-int main(){
-	int T = 0;
-	scanf("%d", &T);
-	while(T--){
-		scanf("%d", &n);
-		cnt = 1;
-		clear(1);
-		for(int i = 0; i < 26; i++)
-			son[0][i] = 1;
-		int len = 0;
-		for(int i = 1; i <= n; i++){
-			scanf("%s", s + 1);
-			len = strlen(s + 1);
-			insert(s, len);
-			memset(s,0,sizeof(char)*(len+ 2));
-		}
-		ACmatch();
+
+int main()
+{
+	cnt = 0;
+	root = newNode();
+	scanf("%d", &n);
+	for(int i = 0; i < C; i++)
+		son[0][i] = 1;
+	for(int i = 1; i <= n; i++)
+	{
 		scanf("%s", s + 1);
-		len = strlen(s + 1);
-		int ans = 0;
-		for(int now = 1, i = 1; i <= len; i++){
-			int c = s[i] - 'a';
-			now = son[now][c];
-			for(int j = now; j; j = fail[j]){
-				if(f[j])
-					break;
-				f[j] = 1;
-				ans += num[j];
-			}
-			
-		}
-		printf("%d\n", ans);
+		insert(s);
 	}
+	getfail();
 	return 0;
 }

@@ -44,7 +44,7 @@ int work2(int *a, int n){//输出最靠右的最小表示,待验，谨慎使用
 	return pos;
 }
 */
-int getmin(char *s, int n){// 0-base!!!!!!
+int getmin(char *s, int n){// 0-base
 	int i = 0, j = 1, k = 0;
 	while(i < n && j < n && k < n){
 		int x = i + k;
