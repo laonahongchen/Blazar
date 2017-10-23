@@ -2,7 +2,7 @@ int manacher(char *st)
 {
 	const int N = 1e6+10;
 	static char s[N << 1];
-	static int p[N];
+	static int p[N << 1];
 	int n = strlen(st + 1);
 	s[0] = '$';
 	s[1] = '#';

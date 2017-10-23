@@ -364,7 +364,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 %\cppcode{data-structure/mo-team.cpp}
 \cppcode{lyx-ds/modui_modify_ver.cpp}
 
-\subsection{树上在线莫队}
+\subsection{树上莫队}
 %\cppcode{data-structure/mo-teamontree.cpp}
 \cppcode{lyx-ds/modui_tree_ver.cpp}
 
@@ -511,11 +511,14 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{二维几何}
 \cppcode{Geometry/8 Geo2D_simple.cpp}
 
+\subsection{凸包}
+\cppcode{Geometry/convex.cpp}
+
 \subsection{整数半平面交}
 \cppcode{Geometry/9 HPI_integer.cpp}
 
-\subsection{凸包闵可夫斯基和}
-\cppcode{Geometry/10 mink.cpp}
+%\subsection{凸包闵可夫斯基和}
+%\cppcode{Geometry/10 mink.cpp}
 
 \subsection{三角形}
 \cppcode{Geometry/11 triangle.cpp}
@@ -534,6 +537,8 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 
 \subsection{平面最近点对}
 \cppcode{nearest.cpp}
+
+%\subsection{}
 
 \iffalse
 \subsection{二维几何基础}
@@ -797,6 +802,8 @@ $$0 \leq G(u,v) \leq C(u,v)-B(u,v)$$
 		\item 对空间限制判断不足导致MLE；
 		\item 对于重边未注意，
 		\item 对于0、1base未弄清楚，用混
+		\item map的赋值问题（dis[] = find(dis[])）
+		\item 输出格式
 	\end{enumerate}
 \end{spacing}
 
