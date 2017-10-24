@@ -6,7 +6,7 @@ inline bool turn_right(const point &a, const point &b, const point &c) {
 	return det(b - a, c - a) < -EPS;
 }
 inline vector<point> convex_hull(vector<point> a) {
-	int n = (int)a.size(), cnt = 0;
+	int n = (int)a.size(), cnt = 0;r
 	sort(a.begin(), a.end());
 	vector<point> ret;
 	for (int i = 0; i < n; ++i) {
