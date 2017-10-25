@@ -12,6 +12,7 @@ int manacher(char *st)
 		s[(i << 1) + 1] = '#';
 	}
 	n = n * 2 + 1;
+	s[n + 1] = 0;
 	int pos, mx = 0, res = 0;
 	for(int i = 1; i <= n; i++)
 	{
