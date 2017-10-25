@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  25 OCT 2017 17:34
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  25 OCT 2017 17:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2323,17 +2323,16 @@ ed.
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/5 areaCT.cpp" )...executed.
 
- (./main.out.pyg)
+ (./main.out.pyg [102])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/6 CircleArea.cpp" )...executed.
 
- (./main.out.pyg
-[102])
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/7 DelaunayTriangulation.cpp" )..
 .executed.
 
- (./main.out.pyg [103] [104] [105])
+(./main.out.pyg [103] [104] [105])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/8 Geo2D_simple.cpp" )...executed
 .
@@ -2342,8 +2341,7 @@ escape=True -o "main.out.pyg" "source/Geometry/8 Geo2D_simple.cpp" )...executed
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/convex.cpp" )...executed.
 
-
-(./main.out.pyg)
+ (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/9 HPI_integer.cpp" )...executed.
 
@@ -2358,6 +2356,7 @@ escape=True -o "main.out.pyg" "source/Geometry/12.cpp" )...executed.
  (./main.out.pyg)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
 escape=True -o "main.out.pyg" "source/Geometry/13.cpp" )...executed.
+
 
 (./main.out.pyg [110])
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -P math
@@ -2846,7 +2845,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1165.
 Here is how much of TeX's memory you used:
  31187 strings out of 493638
  588825 string characters out of 6146796
- 669747 words of memory out of 5000000
+ 668747 words of memory out of 5000000
  33936 multiletter control sequences out of 15000+600000
  24865 words of font info for 136 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
