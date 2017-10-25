@@ -159,8 +159,6 @@
 
 \cppcode{number-theory/pollard-rho.cpp}
 
-
-
 \subsection{快速数论变换(zky)}
 返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} (mod) \ (0 \leq i < n)$$
 \indent 使用说明：$magic$是$mod$的原根\\
@@ -198,6 +196,9 @@
 \subsection{高斯消元}
 \cppcode{numerical-algorithm/Gauss.cpp}
 
+\subsection{线性基}
+\cppcode{LB.cpp}
+
 \subsection{快速傅立叶变换}
 
 返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} \ (0 \leq i < n)$$
@@ -223,9 +224,9 @@
 
 \cppcode{numerical-algorithm/polyroot.cpp}
 
-\section{快速求逆}
+\subsection{快速求逆}
 \cppcode{Mathematical-Algorithm/Quick-Reverse.cpp}
-\section{魔幻多项式}
+\subsection{魔幻多项式}
 \subsection*{快速傅里叶变换}
 \noindent \textbf{注意事项：}请实现复数类Complex，并注意快速傅里叶变换精度较差，建议使用快速数论变换。
 \cppcode{Mathematical-Algorithm/Fast-Fourier-Transform.cpp}
