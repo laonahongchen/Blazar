@@ -31,7 +31,8 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Splay}{32}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}坚固的数据结构}{35}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}坚固的平衡树}{35}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}坚固的左偏树}{36}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2}fuck}{36}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}坚固的左偏树}{36}{subsubsection.3.2.3}
 \contentsline {subsection}{\numberline {3.3}树上的魔术师}{36}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}轻重树链剖分}{36}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}lct}{39}{subsubsection.3.3.2}
