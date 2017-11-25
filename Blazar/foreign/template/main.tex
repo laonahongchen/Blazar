@@ -1,5 +1,5 @@
 %文档类型
-\documentclass[a4paper,twocolumn]{article}
+\documentclass[landscape,twocolumn,a4paper]{article}
 
 %引用包裹
 \usepackage{bm}
@@ -25,7 +25,8 @@
 \usepackage{booktabs}
 \usepackage{harpoon}
 %代码高亮
-\geometry{margin=1in}
+%\geometry{margin=1in}
+\geometry{a4paper,left=1.0cm,right=1.0cm,top=0.75cm,bottom=0.75cm}
 \setmonofont{Ubuntu Mono}
 %字体设置
 \setmainfont{Ubuntu Mono}
@@ -109,13 +110,13 @@
 
 \subsection{快速求逆元}
 
-返回结果：$$x^{-1}(mod)$$
+%返回结果：$$x^{-1}(mod)$$
 \indent 使用条件：$x \in [0, mod)$并且$x$与$mod$互质
 
 \cppcode{number-theory/inverse.cpp}
 
-\subsection{莫比乌斯反演}
-\cppcode{mobius.cpp}
+%\subsection{莫比乌斯反演}
+%\cppcode{mobius.cpp}
 
 \subsection{扩展欧几里德算法}
 
@@ -128,7 +129,7 @@
 \subsection{中国剩余定理}
 
 返回结果：$$x \equiv r_i (mod \ p_i) \ (0 \leq i < n)$$
-\indent 使用条件：$p_i$需两两互质\\
+%\indent 使用条件：$p_i$需两两互质\\
 %\indent 时间复杂度：$\mathcal{O}(nlogn)$
 
 \cppcode{number-theory/chinese-remainder-theorem.cpp}
@@ -149,7 +150,7 @@
 \subsection{小步大步}
 
 返回结果：$$a^x=b \ (mod \ p)$$
-\indent 使用条件：$p$为质数\\
+\indent 使用条件：$p$为质数
 \indent 时间复杂度：$\mathcal{O}(\sqrt{n})$
 
 \cppcode{number-theory/BSGS.cpp}
@@ -208,9 +209,9 @@
 
 返回结果：$$c_i=\sum_{0 \leq j \leq i} a_j \cdot b_{i-j} \ (0 \leq i < n)$$
 \indent 时间复杂度：$\mathcal{O}(n log n)$
-\fi
-\cppcode{numerical-algorithm/fast-fourier-transform.cpp}
 
+\cppcode{numerical-algorithm/fast-fourier-transform.cpp}
+\fi
 \subsection{1e9+7 FFT}
 \cppcode{numerical-algorithm/fft.cpp}
 
@@ -223,9 +224,7 @@
 \subsection{自适应辛普森}
 \cppcode{numerical-algorithm/adaptive-simpson.cpp}
 
-
 \subsection{多项式求根}
-
 \cppcode{numerical-algorithm/polyroot.cpp}
 
 \subsection{快速求逆}
@@ -446,7 +445,7 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 \subsection{带花树}
 \cppcode{Graph-Algorithm/Maximum-Matching-Blossom.cpp}
 
-
+\iffalse
 \section{字符串}
 
 \subsection{KMP算法}
@@ -501,6 +500,58 @@ F_{t + 1}(x) &\equiv F_t(x) - \dfrac{F_t(x) * A(x) - 1}{A(x)} \\
 	\item \indent 如果要建立关于多个串的后缀树，请用不同的分隔符，并且对于每个叶子结点，去掉和它父亲的连边上出现的第一个分隔符之后的所有字符；
 \end{enumerate}
 \cppcode{String-Algorithm/Suffix-Tree.cpp}
+
+\fi
+\section{字符串}
+
+\subsection{KMP算法}
+
+\cppcode{temp_ypm/KMP-poj3461.cpp}
+
+\subsection{扩展KMP算法}
+
+%返回结果：$$next_i = lcp(text, text_{i \dots n-1})$$
+
+%\cppcode{string-manipulation/ExtKMP.cpp}
+\cppcode{temp_ypm/exKMP-hdu2594.cpp}
+
+\subsection{AC自动机}
+
+%\cppcode{string-manipulation/ACmachine.cpp}
+\cppcode{temp_ypm/acauto.cpp}
+\subsection{后缀自动机}
+
+\subsubsection{广义后缀自动机(多串)}
+\noindent \textbf{注意事项：}空间是插入字符串总长度的2倍并请注意字符集大小。
+\cppcode{temp_ypm/gy sam.cpp}
+
+\subsubsection{sam-ypm}
+\subsubsection*{sam-nsubstr}
+\cppcode{temp_ypm/SAM-NSUBSTR.cpp}
+\subsubsection*{sam-lcs}
+\cppcode{temp_ypm/SAM-LCS2.cpp}
+
+\subsection{后缀数组}
+\noindent \textbf{注意事项：}$\mathcal{O}(n\log n)$倍增构造。
+%\cppcode{String-Algorithm/Suffix-Array.cpp}
+\cppcode{temp_ypm/SA.cpp}
+
+%\noindent \textbf{注意：}$\mathcal{O}(n)$线性构造，常数大,约为倍增的0.5-0.6倍
+%\cppcode{temp_ypm/dc3-uoj34.cpp}
+
+%\subsection{回文自动机}
+%\noindent \textbf{注意事项：}请注意字符集大小。
+%\cppcode{String-Algorithm/Palindromic-Automaton.cpp}
+%\cppcode{temp_ypm/PAM.cpp}
+\subsection{Manacher}
+\noindent \textbf{注意事项：}1-based算法，请注意下标。
+\cppcode{temp_ypm/manacher-poj3974.cpp}
+\subsection{循环串的最小表示}
+\noindent \textbf{注意事项：}0-Based算法，请注意下标。
+%\cppcode{String-Algorithm/Minimum-Representation.cpp}
+\cppcode{temp_ypm/minimumpresentation.cpp}
+
+
 \section{计算几何}
 
 \iffalse
